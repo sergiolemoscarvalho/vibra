@@ -5,17 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<link href="./assets/css/style.css" rel="stylesheet">	
+	<link href="./assets/css/swiper.min.css" rel="stylesheet">	
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
 	<script src='./assets/js/fade.js'></script>
 	<script src='./assets/js/menu.js'></script>
+	<script src='./assets/js/swiper.jquery.min.js'></script>
+	<script src='./assets/js/slide.js'></script>
     <title>Vibra - Relatório de Sustentabilidade 2021</title>
 </head>
 <body>
     <header id="header">
 		<div class="menu" id="menu">
-			<div class="barra-contato">				
+			<div class="barra-contato">
 				<div class="botoes">
 					<div class="menu-trigger" id="menu-trigger">
 						<input type="checkbox" id="check">
@@ -43,6 +46,8 @@
 						<a href="" class="pdf">PDF COMPLETO</a>
 					</nav>
 				</div>
+				<a href="" class="pdf">PDF</a>
+				<a href="" class="seta-baixo"><img src="./assets/images/seta-baixo.jpg"></a>
 			</div>
 		</div>		
 	</header>
@@ -50,11 +55,357 @@
 		<section class="banner">
 			<img src="./assets/images/banner.jpg" alt="Vibra" title="Vibra">
 		</section>
+
+		<section class="sobre">
+			<article class="texto margen-lateral">
+				<div>				
+					<h3><i>Se tem<br>energia,</i><br>
+						<img src="./assets/images/vibra-branco.png">
+					</h3>
+					
+					<p>Somos Vibra (Vibra Energia S.A),<br> empresa de capital aberto, uma das<br> maiores companhias de energia do <br>Brasil, <strong>líder no mercado de<br>distribuição de combustíveis e<br> lubrificantes</strong> e vocacionada para<br> ser <strong>protagonista no processo de<br> transição energética.</strong></p>
+				</div>
+			</article>
+			<article class="imagem">
+				<img src="./assets/images/fotos/energia-solar.jpg">
+			</article>
+		</section>
+
+		<section class="estatisticas">
+			<div class="swiper-container slide-estatisticas">
+				<div class="swiper-wrapper">
+					<article class="swiper-slide">						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0" style="background: #268200;">
+							<article class="box">
+								<img src="./assets/images/colaboradores.svg">
+								<div>
+									<h5>3.377</h5>
+									<p>colaboradores</p>
+								</div>
+							</article>	
+							<div class="box">
+								<img src="./assets/images/bases.svg">
+								<div>
+									<h5>43 bases</h5>
+									<p>operadas por nós</p>
+								</div>
+							</div>
+							<div class="box">
+								<img src="./assets/images/fabrica.svg">
+								<div>
+									<h5>1 Fábrica</h5>
+									<p>de Lubrificantes</p>
+								</div>
+							</div>
+							<div class="box">
+								<img src="./assets/images/postos.svg">
+								<div>
+									<h5>8.201 postos</h5>
+									<p>bandeira Petrobras em<br>
+									<strong>+1.800</strong> municípios, nos<br>
+									<strong>27</strong> estados brasileiros e<br>
+									DF, com expectativa de<br>
+									abertura de mais <strong>600<br>
+									postos em 5 anos</strong></p>
+								</div>
+							</div>
+						</div>	
+						<div class="foto-banner" data-swiper-parallax="0">
+							<div class="foto"><img src="./assets/images/fotos/trabalhador.jpg"></div>
+						</div>		
+					</article>	
+					<article class="swiper-slide">						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0" style="background: #268200;">
+							<div class="box">
+								<img src="./assets/images/pais.svg">
+								<div>
+									<h5>30 milhões <span>de</span></h5>
+									<p>clientes únicos realizam <br>transações em nossa <br>rede de postos todo mês</p>
+								</div>
+							</div>	
+							<div class="box">
+								<img src="./assets/images/dinheiro.svg">
+								<div>
+									<h5>R$1.1B/ano <span>é valor</span></h5>
+									<p>transacionado em nossas <br>lojas de conveniência</p>
+								</div>
+							</div>
+							<div class="box">
+								<img src="./assets/images/produtos-lubrax.svg">
+								<div>
+									<h5>Produtos Lubrax</h5>
+									<p>disponibilizados para mais<br> de 80 mil clientes em todo<br> o país</p>
+								</div>
+							</div>
+							<div class="box">
+								<img src="./assets/images/consumo.svg">
+								<div>
+									<h5>+22 mil <span>pontos de</span></h5>
+									<p>consumo em empresas<br> clientes</p>
+								</div>
+							</div>
+						</div>	
+						<div class="foto-banner" data-swiper-parallax="0">
+							<div class="foto"><img src="./assets/images/fotos/trabalhador2.jpg"></div>
+						</div>		
+					</article>
+					<article class="swiper-slide">						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0">
+							<div class="box">
+								<img src="./assets/images/caminhao.svg">
+								<div>
+									<h5><span>Distribuímos</span> 37,3% <span>do</span></h5>
+									<p>combustível usado por<br> empresas no país</p>
+								</div>
+							</div>	
+							<div class="box">
+								<img src="./assets/images/aviao-delocolando.svg">
+								<div>
+									<p>Presença em</p>
+									<h5>90 aeroportos</h5>
+								</div>
+							</div>
+							<div class="box">
+								<img src="./assets/images/aviao.svg">
+								<div>
+									<p>Abastecemos cerca de</p>
+									<h5>7 em cada 10</h5>
+									<p>voos comerciais no Brasil</p>
+								</div>
+							</div>
+						</div>	
+						<div class="foto-banner" data-swiper-parallax="0">
+							<div class="foto"><img src="./assets/images/fotos/trabalhador3.jpg"></div>
+						</div>		
+					</article>										
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-white"></div>
+
+				<!-- Add Navigation -->
+				<div class="swiper-button-next swiper-button-white">
+					<img class="seta1" src="./assets/images/seta-slide2.png">
+				</div>				
+			</div>			
+		</section>
+
+		<section class="maquete">
+			<div class="swiper-container slide-maquete">
+				<div class="swiper-wrapper">
+					<article class="swiper-slide">
+						<div class="foto-banner" data-swiper-parallax="0">
+							<h1>Sempre a postos para<br>mover o Brasil com sua<br>melhor energia</h1>
+							<div class="foto"><img src="./assets/images/maquete/1.png"></div>
+						</div>						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0">
+							<div class="box">
+								<h2>1</h2>
+								<p>Adquirimos nossas matérias-primas de fornecedores homologados nacionais e estrangeiros. Dentre os produtos que comercializamos, destacamos os biocombustíveis. Nossa joint venture com a Copersucar nos garantirá fornecimento exclusivo de etanol.</p>
+							</div>	
+						</div>								
+					</article>	
+					<article class="swiper-slide">
+						<div class="foto-banner" data-swiper-parallax="0">
+							<h1>Sempre a postos para<br>mover o Brasil com sua<br>melhor energia</h1>
+							<div class="foto"><img src="./assets/images/maquete/2.png"></div>
+						</div>						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0">
+							<div class="box">
+								<h2>2</h2>
+								<p>De nossas bases operacionais, saem nossos combustíveis. Somos capazes de suprir eficientemente as demandas de nossos clientes em qualquer município brasileiro. Adicionalmente, nossa fábrica de lubrificantes oferece uma linha completa, com mais 130 famílias de produtos, para aplicações automotivas, industriais, marítimas e ferroviárias.</p>
+							</div>	
+						</div>								
+					</article>	
+					<article class="swiper-slide">
+						<div class="foto-banner" data-swiper-parallax="0">
+							<h1>Sempre a postos para<br>mover o Brasil com sua<br>melhor energia</h1>
+							<div class="foto"><img src="./assets/images/maquete/3ab.png"></div>
+						</div>						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0">
+							<div class="box">
+								<h2>3</h2>
+								<h3>a</h3>
+								<p>Entramos no mercado de comercialização de energia renovável por meio da Targus Energia e da Comerc. Temos um portfólio completo de produtos e serviços para o Mercado Livre de Energia e para o modelo de geração distribuída. Atuamos, também, em iniciativas para a geração de energia de fontes renováveis.</p>
+								<h3>b</h3>
+								<p>Atuamos no beneficiamento e na distribuição de produtos químicos, como enxofre, solventes hidrocarbônicos e especialidades químicas. Somos líderes nacionais no mercado de solventes. Atendemos diversos setores da economia, como agronegócio, óleo e gás, química fina, tintas, adesivos entre outros.</p>
+							</div>	
+						</div>								
+					</article>	
+					<article class="swiper-slide">
+						<div class="foto-banner" data-swiper-parallax="0">
+							<h1>Sempre a postos para<br>mover o Brasil com sua<br>melhor energia</h1>
+							<div class="foto"><img src="./assets/images/maquete/3cd.png"></div>
+						</div>						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0">
+							<div class="box">
+								<h2>3</h2>
+								<h3>c</h3>
+								<p>Somos a maior distribuidora de combustíveis e lubrificantes para empresas. Temos clientes de diferentes setores, como siderurgia, mineração, papel e celulose, cimento, transporte, termelétricas, agronegócio e transportador revendedor retalhista de combustível. Somos, também, a maior distribuidora de combustíveis de aviação do Brasil.</p>
+								<h3>d</h3>
+								<p>Contamos com a maior rede de postos de serviço do país e potencializamos nosso negócio no varejo de conveniência, já consolidado com a franquia BR Mania, por meio de parceria firmada com a Americanas com a qual constituímos a sociedade Vem Conveniência.</p>
+							</div>	
+						</div>								
+					</article>	
+					<article class="swiper-slide">
+						<div class="foto-banner" data-swiper-parallax="0">
+							<h1>Sempre a postos para<br>mover o Brasil com sua<br>melhor energia</h1>
+							<div class="foto"><img src="./assets/images/maquete/4.png"></div>
+						</div>						
+						<div class="descricoes margen-lateral" data-swiper-parallax="0">
+							<div class="box">
+								<h2 style="color:#0000FF;">4</h2>
+								<h3 style="color:#0000FF;">g</h3>
+								<h4>Muito em breve</h4>
+								<p> → Oferta off-grid e on-grid de gás natural e biometano<br>
+								→ Soluções para carregamento de veículos elétricos</p>
+								<h3 style="color:#0000FF;">h</h3>
+								<h4>No futuro</h4>
+								<p> → Hidrogênio e células de combustível<br>
+								→ Novos tipos de biocombustíveis e e-fuels<br>
+							→ Novas soluções para mobilidade</p>
+							</div>	
+						</div>			 				
+					</article>								
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination swiper-pagination-white"></div>
+
+				<!-- Add Navigation -->
+				<div class="swiper-button-next swiper-button-white">
+					<img src="./assets/images/seta-slide.png">					
+				</div>				
+			</div>			
+		</section>
+
+		<section class="transicao">
+			<article>
+				<h2><i>Se tem<br>transição energética,</i></h2>
+				<img src="./assets/images/vibra-branco.png">
+			</article>			
+		</section>
+
+		<section class="texto-transicao">
+			<article class="texto1">
+				<p>Nossa meta é assumir um papel de <strong>protagonista no caminho rumo a uma economia de baixo carbono no Brasil.</strong></p>
+
+				<p>Nos reposicionamos como uma empresa de energia que irá <strong>privilegiar a transição rumo a fontes energéticas mais limpas e renováveis.</strong> Dessa forma, os <strong>temas social, ambiental e governança (ESG) são vitais para Vibra</strong> e estão no centro de nossas prioridades, direcionando a adaptação dos nossos negócios, processos e novos desafios. </p>
+
+				<p>Nossa estratégia passa pelo <strong>fortalecimento do nosso portfólio atual,</strong> pelo <strong>investimento em novos vetores de crescimento</strong> e aposta gradual em <strong>espaços de inovação.</strong> Vamos aportar nossa expertise como distribuidor, comercializador, gestor logístico de sucesso e nossa capacidade para o estabelecimento de parcerias sustentáveis para os novos negócios no quais ingressaremos.</p>
+			</article>
+			<article class="texto2">
+				<p>Já em nosso primeiro ano como empresa de energia, realizamos movimentos estratégicos para começarmos a ocupar os espaços previstos em nosso planejamento, em segmentos que demonstram alto potencial de crescimento nos próximos anos.</p>
+				<ul>
+					<li><strong>Etanol: joint venture com Copersucar</strong> nos torna a maior plataforma de originação e de comercialização de etanol do Brasil e uma das maiores do mundo</li>
+
+					<li><strong>Biometano: acordo de cooperação com ZEG Biogás</strong> para a oferta de solução integrada para produção de biometano a partir da vinhaça </li>
+
+					<li><strong>Energia: aquisição da Targus Energia</strong> (uma das 25 maiores comercializadoras independentes de energia do país) e de <strong>50% da Comerc</strong> (uma das principais comercializadoras de energia do Brasil)</li>
+
+					<li><strong>Eletromobilidade: aporte na startup Easy Volt, </strong>uma das maiores redes de recarga elétrica no Brasil</li>
+
+					<li><strong>Diesel verde: parceria com Brasil BioFuels </strong>para viabilizar a construção da primeira biorrefinaria de diesel verde do Brasil, prevista para 2025</li>
+
+					<li><strong>Diesel renovável: projeto-piloto em desenvolvimento no Paraná</strong></li>
+				</ul>
+
+			</article>
+		</section>
+
+		<section class="governanca">			
+			<h2>Governança <strong>Corporativa</strong></h2>					
+		</section>
 		
+		<section class="texto-governanca">
+			<article class="conteudo1">
+				<div class="texto1">
+					<p>Buscamos sempre nos aprimorar para estar atualizados em relação às melhoras práticas de governança. Como empresa de capital aberto vimos a oportunidade para repensarmos pontos estruturantes da nossa governança, em 2021. O desafio foi adaptar nossos instrumentos à nova realidade de uma companhia moderna que demanda agilidade na tomada de decisão sem perder o controle rigoroso que sempre praticamos.</p>
+				</div>
+				<div class="texto2">
+					<p><span style="color: #FEDC00;">Não há tolerância para a corrupção em Vibra. </span>Investimos em comunicação e capacitação em políticas e procedimentos anticorrupção</p>
+					<ul>
+						<li><strong>100%</strong> dos membros do órgão de governança capacitados</li>
+						<li><strong>100%</strong> dos empregados comunicados</li>
+						<li><strong>87%</strong> dos empregados capacitados</li>
+					</ul>
+				</div>
+			</article>
+			<article class="conteudo2">
+				<img src="./assets/images/camping.svg">
+				<h2>PRINCIPAIS REALIZAÇÕES:</h2>
+				<ul>
+					<li>Nova Política de Integridade</li>
+					<li>Revisão do Código de Conduta Ética</li>
+					<li>Criação da Comissão de Ética</li>
+					<li>Implementação do Programa de Governança em Privacidade e Dados Pessoais</li>
+					<li>Estruturação da nova Trilha de Integridade – conjunto de treinamentos relacionados à ética, compliance, gestão de risco, governança e LGPD 75% de todos os colaboradores treinados</li>
+				</ul>
+			</article>
+		</section>
+
+		<section class="pessoas">
+			<article class="conteudo2">
+				<img src="./assets/images/fotos/pessoas.jpg">
+				<h2>Pessoas</h2>				
+			</article>
+			<article class="conteudo1">
+				<div class="texto1">
+					<p>Alicerçamos a transformação da nossa empresa no desenvolvimento de nossos colaboradores. Sabemos que os aprimoramentos em eficiência, em processos e em relacionamento com os clientes só são possíveis com a mudança de nossa forma de ser e fazer. Por isso, colocamos em marcha um projeto de cultura organizacional desenhado para nos posicionar como uma empresa inovadora, ágil e orientada para resultados.</p>
+				</div>
+				<div class="texto2">
+					<h3>71%</h3>
+					<p>índice de favorabilidade média em pesquisa interna sobre o jeito de ser Vibra</p>
+					<h3>NPS de 50%</h3>
+					<p>índice superior à média de 32% registrada em outras empresas com mais de 4 mil funcionários.</p>
+					<span>Fonte: Pin People</span>
+				</div>
+			</article>
+		</section>
+
+		<section class="realizacoes">
+			<article class="conteudo1">
+				<div class="texto1">
+					<h3>PRINCIPAIS REALIZAÇÕES:</h3>
+					<ul>
+						<li>95% dos nossos colaboradores participaram de pelo menos um treinamento</li>
+						<li>Programa de Liderança 174 sucessores mapeados</li>						
+					</ul>
+				</div>
+				<div class="texto2">
+					<strong>Em 2021, lançamos nosso programa corporativo de reconhecimento: o <span> RECONHECE +</span>. Baseado em quatro pilares estratégicos:</strong>
+					<ul>
+						<li>de 4.048 reconhecimentos de atitudes do dia a dia alinhadas aos princípios da nova cultura <span>PILAR AGIR</span></li>
+						<li>de 109 casos cadastrados de melhorias na rotina operacional e administrativa <span>PILAR TRANSFORMAR</span></li>
+						<li>de 141 casos de inovação cadastrados <span>PILAR INOVAR</span></li>
+						<li>de 66 casos cadastrados de ações que reforçam a cultura de prevenção e segurança <span>PILAR PREVENIR</span></li>
+					</ul>
+				</div>
+			</article>
+			<article class="conteudo2">
+				<div class="texto">
+					<div>
+						<strong>Taxa de retorno após licença-maternidade/paternidade</strong>
+						<h3>100%</h3>
+						<p>dos homens</p>
+						<h3>100%</h3>
+						<p>das mulheres</p>
+					</div>
+					<div>
+						<strong>Taxa de retenção após licença-maternidade/paternidade</strong>
+						<h3>93,5%</h3>
+						<p>dos homens</p>
+						<h3>96,3%</h3>
+						<p>das mulheres</p>
+					</div>
+				</div>
+				<div class="imagem">
+					<img src="./assets/images/fotos/taxa.jpg">
+				</div>
+			</article>
+		</section>
 	</main>
 
-	<footer id="footer">
+	<!-- <footer id="footer">
 		
-	</footer>
+	</footer> -->
 </body>
 </html>
