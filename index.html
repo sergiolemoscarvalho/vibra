@@ -10,6 +10,7 @@
 	<link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
 	<script src='./assets/js/fade.js'></script>
+	<script src='./assets/js/ancora.js'></script>
 	<script src='./assets/js/menu.js'></script>
 	<script src='./assets/js/swiper.jquery.min.js'></script>
 	<script src='./assets/js/slide.js'></script>
@@ -26,37 +27,37 @@
 						<span></span>
 					</div>
 				</div>
-				<a class="logo-principal" href="" alt="Vibra" title="Vibra">
+				<a class="logo-principal scroll" href="#inicio" alt="Vibra" title="Vibra">
 					<img class="cinza" src="./assets/images/vibra-favicon2.png" alt="Vibra" title="Vibra">
 					<img class="cor" src="./assets/images/vibra-favicon.png" alt="Vibra" title="Vibra">
 				</a>
 				<div class="conteudo" id="menu-hidde">
-					<a class="logo-principal2" href="" alt="Vibra" title="Vibra">
+					<a class="logo-principal2 scroll" href="#inicio" alt="Vibra" title="Vibra">
 						<img src="./assets/images/vibra.png" alt="Vibra" title="Vibra">
 					</a>
 					<nav class="nav">							
 						<ul>
 							<p>RELATÓRIO DE SUSTENTABILIDADE 2021</p>
-							<li><a href="">Quem Somos</a></li>
-							<li><a href="">Governança Corporativa</a></li>
-							<li><a href="">Nossas Pessoas</a></li>
-							<li><a href="">Compromisso social</a></li>
-							<li><a href="">Gestão Ambiental</a></li>
+							<li><a href="#quem-somos" class="scroll">Quem Somos</a></li>
+							<li><a href="#governanca" class="scroll">Governança Corporativa</a></li>
+							<li><a href="#pessoas" class="scroll">Nossas Pessoas</a></li>
+							<li><a href="#compromisso" class="scroll">Compromisso social</a></li>
+							<li><a href="#gestao" class="scroll">Gestão Ambiental</a></li>
 						</ul>
 						<a href="" class="pdf">PDF COMPLETO</a>
 					</nav>
 				</div>
 				<a href="" class="pdf">PDF</a>
-				<a href="" class="seta-baixo"><img src="./assets/images/seta-baixo.jpg"></a>
+				<a href="#" id="descer" class="seta-baixo"><img src="./assets/images/seta-baixo.jpg"></a>
 			</div>
 		</div>		
 	</header>
 	<main id="index" class="index" tabindex="-1" role="index">
-		<section class="banner">
+		<section class="banner" id="inicio">
 			<img src="./assets/images/banner.jpg" alt="Vibra" title="Vibra">
 		</section>
 
-		<section class="sobre">
+		<section class="sobre" id="quem-somos">
 			<article class="texto margen-lateral">
 				<div>				
 					<h3><i>Se tem<br>energia,</i><br>
@@ -311,7 +312,7 @@
 			</article>
 		</section>
 
-		<section class="governanca">			
+		<section class="governanca" id="governanca">			
 			<h2>Governança <strong>Corporativa</strong></h2>					
 		</section>
 		
@@ -342,7 +343,7 @@
 			</article>
 		</section>
 
-		<section class="pessoas">
+		<section class="pessoas" id="pessoas">
 			<article class="conteudo2">
 				<img src="./assets/images/fotos/pessoas.jpg">
 				<h2>Pessoas</h2>				
@@ -474,22 +475,454 @@
 				</div>
 				<!-- Add Pagination -->
 				<div class="swiper-pagination swiper-pagination-white"></div>
+			</div>			
+		</section>
 
+		<section class="compromisso" id="compromisso">
+			<article class="social">
+				<h2>Compromisso <strong>social</strong></h2>	
+			</article>
+			<article class="apoio-covid">
+				<div class="icone">
+					<img src="./assets/images/saude.svg">
+				</div>
+				<div class="texto">
+					<p>No segundo ano de pandemia, continuamos com ações para apoiar o Brasil no combate à Covid-19, além de manter nossos projetos de atuação voluntária.</p>
+				</div>
+			</article>
+			<article class="principais">
+				<h3>PRINCIPAIS REALIZAÇÕES:</h3>
+				<div>
+					<ul>
+						<li>Doação de câmaras frias para o armazenamento de imunizantes para 29 municípios no Nordeste, beneficiando cerca de 560 mil habitantes.</li>
+						<li>Apoio ao projeto social do Circo Crescer e Viver que atende 221 crianças no entorno de nossa sede no Rio de Janeiro</li>
+						<li>Apoio a dois projetos realizados pelo Instituto Meta Educação: Mulheres Artesãs do Estácio e Reforço do Futuro, atendendo 40 mulheres e 120 e crianças</li>
+					</ul>
+					<ul>
+						<li>Doação de cestas básicas para comunidades vizinhas das nossas bases nos municípios de Duque de Caxias (RJ), Caracaraí (RR), Crato (CE), Cuiabá (MT) e Cruzeiro do Sul (AC), atendendo 3120 famílias e beneficiando 697 agricultores familiares</li>
+						<li>57 voluntários Vibra atuaram como mentores de estudantes da rede pública do Rio de Janeiro, no programa Trilha Empreendedora</li>
+					</ul>
+					<ul>
+						<li>Apoio logístico à Central Única das Favelas (CUFA) para transporte de 24 toneladas de alimentos, mil cestas básicas e 100 kg de roupas na Campanha SOS Petrópolis</li>
+						<li>Em parceria com a Vicar, promotora da Stock Car, e com a CUFA, foi realizada campanha de doações durante a etapa Stok Car de Goiânia onde os carros disputaram a prova com o adesivo #AJUDEPETRÓPOLIS</li>
+					</ul>
+				</div>				
+			</article>
+		</section>
+
+		<section class="transportadoras">
+			<article class="trasporte">
+				<h2>Transportadoras</h2>	
+			</article>
+			<article class="conteudo">
+				<div class="texto">
+					<p>Eficiência nos trajetos percorridos é uma das nossas <strong>principais metas</strong></p>
+				</div>
+				<div class="imagem">
+					<img src="./assets/images/fotos/caminhao.jpg">
+				</div>
+				<div class="metragem">
+					<h3>47.000 m³</h3>
+					<p>foi o volume total cabotado em 2021</p>
+				</div>
+			</article>
+			<article class="principais">
+				<p>Tendo a distribuição de combustível como nosso maior negócio, temos as transportadoras como nossas principais e mais essenciais parceiras. Em 2021, iniciamos uma série de iniciativas para elevar a eficiência e acelerar o desenvolvimento de aspectos ESG entre nossas fornecedoras de transporte.</p>
+				<div>
+					<ul>
+						<li>Torre de Controle de Eficiência Logística e de Segurança e Meio Ambiente</li>
+						<li>Torre de Controle de Eficiência Logística e de Segurança e Meio Ambiente</li>
+						<li>Limitação da idade da frota e preferência para veículos de maior capacidade</li>
+					</ul>
+					<ul>
+						<li>Realização de diagnóstico ESG, com a participação de nossas transportadoras com contrato de longo prazo</li>
+						<li>Implementação de sensores de fadiga na frota de fornecedores que transportam produtos perigosos</li>
+						<li>10ª edição do Motorista DEZtaque, que premia os caminhoneiros que se destacaram por suas atitudes seguras</li>
+					</ul>
+				</div>
+				<ul class="navio">
+					<img src="./assets/images/navio.svg">
+					<li>Início de operação de cabotagem, inédita no cenário nacional, para resolver o suprimento de biodiesel na região nordeste do país, apostando na intermodalidade para o aumento da eficiência no transporte</li>
+				</ul>				
+			</article>
+		</section>
+
+		<section class="gestao" id="gestao">			
+			<h2>Gestão <strong>Ambiental</strong></h2>					
+		</section>
+
+		<section class="ambiental">
+			<div class="swiper-container slide-ambiental">
+				<div class="swiper-wrapper">
+					<!-- Energia -->
+					<article class="swiper-slide">
+						<div class="conteudo1" style="background: #6F736F;">
+							<div class="texto">
+								<p style="font-size: 25px;">Trabalhamos constantemente para atender a conformidade legal nas nossas operações, reduzir o uso dos recursos naturais e a geração de resíduos em nossos processos, minimizar as emissões atmosféricas, preservar a biodiversidade, prevenir e mitigar os passivos ambientais, desenvolver projetos que visam à eficiência energética e ao fortalecimento da educação ambiental dentro da Companhia.</p>
+							</div>							
+							<div class="botoes">								
+								<svg class="energia" xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+								  <g id="Grupo_677" data-name="Grupo 677" transform="translate(-309.25 -2449.25)">
+								    <g id="Grupo_8" data-name="Grupo 8" transform="translate(-370.991 582.25)">
+								      <path id="Caminho_3" data-name="Caminho 3" d="M25.049,713.971,63.8,675.224H50.612l13.186-17.7H38.24L25.049,685.75H38.24Z" transform="translate(677.193 1223.779)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+								      <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(680.991 1867.75)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+								    </g>
+								  </g>
+								</svg>									
+								<div class="swiper-button-next swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_697" data-name="Grupo 697" transform="translate(-479.25 -18199.25)">
+									    <g id="Grupo_688" data-name="Grupo 688" transform="translate(480 18200)">
+									      <g id="Grupo_678" data-name="Grupo 678">
+									        <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									      </g>
+									      <g id="Grupo_679" data-name="Grupo 679" transform="translate(7.03 10.18)">
+									        <path id="Caminho_3124" data-name="Caminho 3124" d="M132.629,61.8a22.975,22.975,0,1,0,22.976,22.975A23,23,0,0,0,132.629,61.8Zm0,1.475a21.359,21.359,0,0,1,10.361,2.669,4.271,4.271,0,0,0-2.245,1.443c-.347.719-1.278,1.723-1.6,1.669,0,0-.08-.046-.182-.282-.785-1.82-3.254-4.755-4.543-4.648-.7.052-.972.716-1.209,1.3-.42,1.038-.644,1.268-1.174,1.174a7.8,7.8,0,0,0-5.342,1.245,2.379,2.379,0,0,0-1.063,1.648c-.156,1.542.848,2.633,2.987,3.242,1,.281,1.546-.631,1.949-1.3.28-.466.6-.994.937-1.077a1.131,1.131,0,0,1,.745.216c.23.139.463.277.7.414,1.166.687,2.488,1.464,2.536,2.132.026.351-.329.842-1,1.38-2.768,2.227-3.276,3.231-3.92,4.5-.077.151-.155.307-.241.471a4.265,4.265,0,0,1-3.629,1.638,1.4,1.4,0,0,0-1.526.608c-.461.786,0,1.891.587,2.665.516.681.529,1.057.47,1.094-.4,0-1.364-.328-3.292-2.529-.438-.5-.932-1.021-1.436-1.553-1.553-1.638-3.314-3.5-3.545-4.968-.289-1.831-2-3.216-2.99-3.875a21.48,21.48,0,0,1,17.671-9.277Zm.45,30.052c-.235-.181-.5-.356-.77-.537-1.109-.738-1.836-1.3-1.836-2.314,0-1.9.041-2.6.829-3.274.357-.308,1.441-.609,4.678.841.706.316.729.534.773.932a1.7,1.7,0,0,0,1.435,1.676c.366.1.808.188,1.272.279.9.175,2.4.471,2.662.927.017.031.059.1-.014.311a14.562,14.562,0,0,0-.426,1.594c-.378,1.662-.632,2.4-1.491,2.5-1.68.189-2.549,1.593-3.317,2.832a10.433,10.433,0,0,1-1.1,1.565c-1.181,1.277-2.922,3.56-2.561,5.606l-.261.007a4.173,4.173,0,0,1-.88-3.994c.107-.415.26-.939.43-1.521,1.1-3.763,1.788-6.5.582-7.426Zm1.621,12.846c-.449-1.54,1.507-3.822,2.151-4.519a11.53,11.53,0,0,0,1.274-1.789c.675-1.092,1.26-2.034,2.228-2.143,1.99-.225,2.42-2.116,2.765-3.636a13.453,13.453,0,0,1,.38-1.432,1.789,1.789,0,0,0-.1-1.532c-.6-1.041-2.153-1.346-3.658-1.641-.424-.083-.828-.162-1.163-.254a.733.733,0,0,1-.315-.136,1.307,1.307,0,0,1-.046-.277,2.349,2.349,0,0,0-1.637-2.12c-3.119-1.4-5.1-1.591-6.242-.611C129,87.236,129,88.593,129,90.473s1.442,2.842,2.495,3.542c.242.161.477.317.666.457.453.638-.658,4.434-1.077,5.863-.175.6-.333,1.139-.444,1.568a5.7,5.7,0,0,0,.477,4.31,21.48,21.48,0,0,1-16.959-32.423c.881.589,2.143,1.667,2.332,2.865.3,1.924,2.148,3.871,3.932,5.754.491.518.971,1.024,1.4,1.511,1.813,2.068,3.211,3.032,4.4,3.032a1.465,1.465,0,0,0,1.356-.8c.2-.408.387-1.3-.651-2.665a2.371,2.371,0,0,1-.463-.923l.02,0c1.471.207,4.2-.628,5.142-2.412.09-.17.172-.333.252-.491.585-1.155,1.009-1.99,3.529-4.019a3.222,3.222,0,0,0,1.546-2.636c-.105-1.44-1.637-2.342-3.259-3.3q-.341-.2-.679-.4a2.437,2.437,0,0,0-1.863-.386,3.271,3.271,0,0,0-1.847,1.75,5.065,5.065,0,0,1-.4.605c-1.68-.5-1.856-1.11-1.8-1.638a1.086,1.086,0,0,1,.483-.619,6.46,6.46,0,0,1,4.192-.974c1.82.335,2.489-1.29,2.8-2.071.032-.079.07-.171.106-.256a10.236,10.236,0,0,1,2.927,3.634,1.663,1.663,0,0,0,1.5,1.169h.032c1.42,0,2.692-2,2.914-2.467a8.222,8.222,0,0,1,2.592-1.108,21.661,21.661,0,0,1,6.846,7.511,2.99,2.99,0,0,0-2.019.449,2.224,2.224,0,0,0-.85,2.07,6.368,6.368,0,0,1-1.5,5.128,4.176,4.176,0,0,0-.457,4.067,4.53,4.53,0,0,0,3.5,2.725l.495.08a10.846,10.846,0,0,1,2.905.655A21.548,21.548,0,0,1,134.7,106.171Zm19.162-18.022a17.114,17.114,0,0,0-2.964-.624l-.5-.08a3.069,3.069,0,0,1-2.378-1.837,2.68,2.68,0,0,1,.294-2.64,7.784,7.784,0,0,0,1.774-6.077c-.034-.581.177-.735.247-.786a2.567,2.567,0,0,1,1.964.015,21.453,21.453,0,0,1,1.559,12.03Zm-8.815,22.7a.737.737,0,0,1-.372.974,29.334,29.334,0,0,1-8.271,2.322.838.838,0,0,1-.095.006.738.738,0,0,1-.093-1.469,27.881,27.881,0,0,0,7.856-2.206.737.737,0,0,1,.975.373ZM119.59,59.009a.737.737,0,0,1,.349-.983,29.394,29.394,0,0,1,8.485-2.563.738.738,0,1,1,.209,1.461,27.886,27.886,0,0,0-8.06,2.434.736.736,0,0,1-.983-.349Zm13.777,54.634a.737.737,0,0,1-.738.738,29.637,29.637,0,0,1-29.584-28.7l-2.367,2.367L99.635,87l4.125-4.125L107.884,87l-1.043,1.043-2.32-2.32a28.162,28.162,0,0,0,28.109,27.181.737.737,0,0,1,.737.737Zm32.207-31.458-4.125,4.125-4.125-4.125,1.043-1.043,2.361,2.361a28.165,28.165,0,0,0-28.1-26.863.738.738,0,0,1,0-1.475,29.641,29.641,0,0,1,29.575,28.3l2.327-2.327Z" transform="translate(-99.635 -55.165)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+									      </g>
+									    </g>
+									  </g>
+									</svg>								
+								</div>	
+								<div class="swiper-button-next swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_699" data-name="Grupo 699" transform="translate(-199.25 -2449.25)">
+									    <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(200 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    <g id="noun-water-drop-773762" transform="translate(-24.78 2341.752)">
+									      <path id="Caminho_3126" data-name="Caminho 3126" d="M264.521,178.248a19.774,19.774,0,0,1-19.741-19.741c0-10.559,18.223-38,19-39.164l.741-1.095.741,1.095c.777,1.165,19,28.587,19,39.164a19.749,19.749,0,0,1-19.739,19.741Zm0-56.786c-3.461,5.315-17.975,28.163-17.975,37.045a17.975,17.975,0,0,0,35.95,0C282.5,149.626,268,126.778,264.521,121.462Z" transform="translate(0)" fill="#fff"/>
+									      <path id="Caminho_3127" data-name="Caminho 3127" d="M306.97,334.281a.885.885,0,0,0-1.147.477,7.771,7.771,0,0,1-14.814-1.448l1.466.848a.878.878,0,0,0,.884-1.518l-3.373-1.942a.872.872,0,0,0-1.2.318l-1.907,3.3a.872.872,0,0,0,.317,1.2.8.8,0,0,0,.441.124.876.876,0,0,0,.76-.441l.883-1.518a9.529,9.529,0,0,0,18.169,1.73.856.856,0,0,0-.477-1.13Z" transform="translate(-34.096 -172.472)" fill="#fff"/>
+									      <path id="Caminho_3128" data-name="Caminho 3128" d="M323,292.271a.872.872,0,0,0-1.2.317l-.883,1.519a9.529,9.529,0,0,0-18.169-1.73.879.879,0,0,0,1.624.671A7.771,7.771,0,0,1,319.18,294.5l-1.466-.848a.878.878,0,1,0-.884,1.518l3.373,1.942a.979.979,0,0,0,.441.124,1.038,1.038,0,0,0,.229-.035.826.826,0,0,0,.529-.406l1.907-3.3a.89.89,0,0,0-.316-1.219Z" transform="translate(-47.032 -136.624)" fill="#fff"/>
+									    </g>
+									  </g>
+									</svg>
+								</div>	
+								<div class="swiper-button-next swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <defs>
+									    <clipPath id="clip-path">
+									      <rect id="Retângulo_432" data-name="Retângulo 432" width="55.692" height="54.544" fill="#fff" stroke="#fff" stroke-width="1"/>
+									    </clipPath>
+									  </defs>
+									  <g id="Grupo_700" data-name="Grupo 700" transform="translate(-89.25 -2449.25)">
+									    <rect id="Retângulo_431" data-name="Retângulo 431" width="80" height="80" transform="translate(90 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    <g id="Grupo_680" data-name="Grupo 680" transform="translate(103.308 2464.456)">
+									      <g id="Grupo_679" data-name="Grupo 679" clip-path="url(#clip-path)">
+									        <path id="Caminho_3129" data-name="Caminho 3129" d="M335.682,231.572l5.091.281a.852.852,0,0,0,.905-.811.863.863,0,0,0-.811-.9l-6.553-.356-.022,0a.822.822,0,0,0-.57.1.877.877,0,0,0-.221.184c-.015.017-.025.03-.036.043l-.007.009a.792.792,0,0,0-.078.122l-2.706,5.334a.849.849,0,0,0-.049.655.861.861,0,0,0,.43.5.92.92,0,0,0,.39.1.858.858,0,0,0,.766-.478l1.984-3.913L345.664,252.3H327.525a.859.859,0,1,0,0,1.718h19.626a.858.858,0,0,0,.748-1.288Z" transform="translate(-292.32 -205.608)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									        <path id="Caminho_3130" data-name="Caminho 3130" d="M26.207,269.374a.858.858,0,0,0-1.195-.2.861.861,0,0,0-.207,1.2l3.322,4.7H2.346L13.067,256.5a.861.861,0,0,0-.316-1.179.848.848,0,0,0-.423-.112.863.863,0,0,0-.748.432L.115,275.5a.858.858,0,0,0,.743,1.288H28.14L24.8,281.57a.859.859,0,0,0,.7,1.35.861.861,0,0,0,.706-.367l4.281-6.133a.862.862,0,0,0,0-.988Z" transform="translate(0 -228.375)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									        <path id="Caminho_3131" data-name="Caminho 3131" d="M112.719,23.954a.854.854,0,0,0,.384.474.875.875,0,0,0,.156.065l.019.006.051.014c.029.007.055.012.082.015l.027,0a.712.712,0,0,0,.1.006c.042,0,.085,0,.127,0l6.667-.874a.867.867,0,0,0,.738-.968.857.857,0,0,0-.967-.741l-4.958.656L126.733,2.535l10.728,18.581a.857.857,0,0,0,.525.406.845.845,0,0,0,.648-.086.864.864,0,0,0,.316-1.177L127.48.388A.848.848,0,0,0,126.738,0h0a.852.852,0,0,0-.744.388l-12.267,21.24-1.542-4.422a.859.859,0,0,0-.445-.5.844.844,0,0,0-.362-.083.826.826,0,0,0-.282.05.861.861,0,0,0-.534,1.1Z" transform="translate(-98.893)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									      </g>
+									    </g>
+									  </g>
+									</svg>
+								</div>
+							</div>
+						</div>	
+						<div class="conteudo2">
+							<div class="texto1 energia">								
+								<img src="./assets/images/energia.svg">
+								<div>									
+									<h2>Energia</h2>									
+									<h3>METAS PARA ATÉ 2024:</h3>
+									<ul>
+										<li>reduzir 10% no consumo de energia das nossas bases de distribuição</li>
+										<li>aumentar a eficiência energética dentro da nossa organização em pelo menos 4% (comparado a 2019)</li>
+									</ul>
+								</div>
+							</div>
+							<div class="texto2">
+								<h2>PRINCIPAIS REALIZAÇÕES EM 2021:</h2>
+								<ul>
+									<li>7 instalações Vibra migraram para o mercado livre de energia e passaram a consumir eletricidade de fontes renováveis de energia</li>
+									<li>Adquirimos 11 mil I-REC (International Renewable Energy Certificate), o que equivale à 11 mil MWh de energia elétrica produzida a partir de fontes renováveis</li>						
+								</ul>
+							</div>
+						</div>								
+					</article>
+
+					<!-- climaticas -->
+					<article class="swiper-slide">
+						<div class="conteudo1" style="background: #BBBFBB;">
+							<div class="texto">
+								<p style="color: #000; font-size: 39px;">Em 2021 assumimos o compromisso de ter emissão líquida zero para os escopos 1 e 2 até o ano de 2025 e a ambiciosa meta de emissão líquida zero para o escopo 3 até 2050.</p>
+							</div>
+							<div class="botoes">
+								<div class="swiper-button-prev swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_677" data-name="Grupo 677" transform="translate(-309.25 -2449.25)">
+									    <g id="Grupo_8" data-name="Grupo 8" transform="translate(-370.991 582.25)">
+									      <path id="Caminho_3" data-name="Caminho 3" d="M25.049,713.971,63.8,675.224H50.612l13.186-17.7H38.24L25.049,685.75H38.24Z" transform="translate(677.193 1223.779)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+									      <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(680.991 1867.75)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    </g>
+									  </g>
+									</svg>
+								</div>								
+								<svg class="climaticas" xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+								  <g id="Grupo_697" data-name="Grupo 697" transform="translate(-479.25 -18199.25)">
+								    <g id="Grupo_688" data-name="Grupo 688" transform="translate(480 18200)">
+								      <g id="Grupo_678" data-name="Grupo 678">
+								        <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+								      </g>
+								      <g id="Grupo_679" data-name="Grupo 679" transform="translate(7.03 10.18)">
+								        <path id="Caminho_3124" data-name="Caminho 3124" d="M132.629,61.8a22.975,22.975,0,1,0,22.976,22.975A23,23,0,0,0,132.629,61.8Zm0,1.475a21.359,21.359,0,0,1,10.361,2.669,4.271,4.271,0,0,0-2.245,1.443c-.347.719-1.278,1.723-1.6,1.669,0,0-.08-.046-.182-.282-.785-1.82-3.254-4.755-4.543-4.648-.7.052-.972.716-1.209,1.3-.42,1.038-.644,1.268-1.174,1.174a7.8,7.8,0,0,0-5.342,1.245,2.379,2.379,0,0,0-1.063,1.648c-.156,1.542.848,2.633,2.987,3.242,1,.281,1.546-.631,1.949-1.3.28-.466.6-.994.937-1.077a1.131,1.131,0,0,1,.745.216c.23.139.463.277.7.414,1.166.687,2.488,1.464,2.536,2.132.026.351-.329.842-1,1.38-2.768,2.227-3.276,3.231-3.92,4.5-.077.151-.155.307-.241.471a4.265,4.265,0,0,1-3.629,1.638,1.4,1.4,0,0,0-1.526.608c-.461.786,0,1.891.587,2.665.516.681.529,1.057.47,1.094-.4,0-1.364-.328-3.292-2.529-.438-.5-.932-1.021-1.436-1.553-1.553-1.638-3.314-3.5-3.545-4.968-.289-1.831-2-3.216-2.99-3.875a21.48,21.48,0,0,1,17.671-9.277Zm.45,30.052c-.235-.181-.5-.356-.77-.537-1.109-.738-1.836-1.3-1.836-2.314,0-1.9.041-2.6.829-3.274.357-.308,1.441-.609,4.678.841.706.316.729.534.773.932a1.7,1.7,0,0,0,1.435,1.676c.366.1.808.188,1.272.279.9.175,2.4.471,2.662.927.017.031.059.1-.014.311a14.562,14.562,0,0,0-.426,1.594c-.378,1.662-.632,2.4-1.491,2.5-1.68.189-2.549,1.593-3.317,2.832a10.433,10.433,0,0,1-1.1,1.565c-1.181,1.277-2.922,3.56-2.561,5.606l-.261.007a4.173,4.173,0,0,1-.88-3.994c.107-.415.26-.939.43-1.521,1.1-3.763,1.788-6.5.582-7.426Zm1.621,12.846c-.449-1.54,1.507-3.822,2.151-4.519a11.53,11.53,0,0,0,1.274-1.789c.675-1.092,1.26-2.034,2.228-2.143,1.99-.225,2.42-2.116,2.765-3.636a13.453,13.453,0,0,1,.38-1.432,1.789,1.789,0,0,0-.1-1.532c-.6-1.041-2.153-1.346-3.658-1.641-.424-.083-.828-.162-1.163-.254a.733.733,0,0,1-.315-.136,1.307,1.307,0,0,1-.046-.277,2.349,2.349,0,0,0-1.637-2.12c-3.119-1.4-5.1-1.591-6.242-.611C129,87.236,129,88.593,129,90.473s1.442,2.842,2.495,3.542c.242.161.477.317.666.457.453.638-.658,4.434-1.077,5.863-.175.6-.333,1.139-.444,1.568a5.7,5.7,0,0,0,.477,4.31,21.48,21.48,0,0,1-16.959-32.423c.881.589,2.143,1.667,2.332,2.865.3,1.924,2.148,3.871,3.932,5.754.491.518.971,1.024,1.4,1.511,1.813,2.068,3.211,3.032,4.4,3.032a1.465,1.465,0,0,0,1.356-.8c.2-.408.387-1.3-.651-2.665a2.371,2.371,0,0,1-.463-.923l.02,0c1.471.207,4.2-.628,5.142-2.412.09-.17.172-.333.252-.491.585-1.155,1.009-1.99,3.529-4.019a3.222,3.222,0,0,0,1.546-2.636c-.105-1.44-1.637-2.342-3.259-3.3q-.341-.2-.679-.4a2.437,2.437,0,0,0-1.863-.386,3.271,3.271,0,0,0-1.847,1.75,5.065,5.065,0,0,1-.4.605c-1.68-.5-1.856-1.11-1.8-1.638a1.086,1.086,0,0,1,.483-.619,6.46,6.46,0,0,1,4.192-.974c1.82.335,2.489-1.29,2.8-2.071.032-.079.07-.171.106-.256a10.236,10.236,0,0,1,2.927,3.634,1.663,1.663,0,0,0,1.5,1.169h.032c1.42,0,2.692-2,2.914-2.467a8.222,8.222,0,0,1,2.592-1.108,21.661,21.661,0,0,1,6.846,7.511,2.99,2.99,0,0,0-2.019.449,2.224,2.224,0,0,0-.85,2.07,6.368,6.368,0,0,1-1.5,5.128,4.176,4.176,0,0,0-.457,4.067,4.53,4.53,0,0,0,3.5,2.725l.495.08a10.846,10.846,0,0,1,2.905.655A21.548,21.548,0,0,1,134.7,106.171Zm19.162-18.022a17.114,17.114,0,0,0-2.964-.624l-.5-.08a3.069,3.069,0,0,1-2.378-1.837,2.68,2.68,0,0,1,.294-2.64,7.784,7.784,0,0,0,1.774-6.077c-.034-.581.177-.735.247-.786a2.567,2.567,0,0,1,1.964.015,21.453,21.453,0,0,1,1.559,12.03Zm-8.815,22.7a.737.737,0,0,1-.372.974,29.334,29.334,0,0,1-8.271,2.322.838.838,0,0,1-.095.006.738.738,0,0,1-.093-1.469,27.881,27.881,0,0,0,7.856-2.206.737.737,0,0,1,.975.373ZM119.59,59.009a.737.737,0,0,1,.349-.983,29.394,29.394,0,0,1,8.485-2.563.738.738,0,1,1,.209,1.461,27.886,27.886,0,0,0-8.06,2.434.736.736,0,0,1-.983-.349Zm13.777,54.634a.737.737,0,0,1-.738.738,29.637,29.637,0,0,1-29.584-28.7l-2.367,2.367L99.635,87l4.125-4.125L107.884,87l-1.043,1.043-2.32-2.32a28.162,28.162,0,0,0,28.109,27.181.737.737,0,0,1,.737.737Zm32.207-31.458-4.125,4.125-4.125-4.125,1.043-1.043,2.361,2.361a28.165,28.165,0,0,0-28.1-26.863.738.738,0,0,1,0-1.475,29.641,29.641,0,0,1,29.575,28.3l2.327-2.327Z" transform="translate(-99.635 -55.165)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+								      </g>
+								    </g>
+								  </g>
+								</svg>							
+								<div class="swiper-button-next swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_699" data-name="Grupo 699" transform="translate(-199.25 -2449.25)">
+									    <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(200 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    <g id="noun-water-drop-773762" transform="translate(-24.78 2341.752)">
+									      <path id="Caminho_3126" data-name="Caminho 3126" d="M264.521,178.248a19.774,19.774,0,0,1-19.741-19.741c0-10.559,18.223-38,19-39.164l.741-1.095.741,1.095c.777,1.165,19,28.587,19,39.164a19.749,19.749,0,0,1-19.739,19.741Zm0-56.786c-3.461,5.315-17.975,28.163-17.975,37.045a17.975,17.975,0,0,0,35.95,0C282.5,149.626,268,126.778,264.521,121.462Z" transform="translate(0)" fill="#fff"/>
+									      <path id="Caminho_3127" data-name="Caminho 3127" d="M306.97,334.281a.885.885,0,0,0-1.147.477,7.771,7.771,0,0,1-14.814-1.448l1.466.848a.878.878,0,0,0,.884-1.518l-3.373-1.942a.872.872,0,0,0-1.2.318l-1.907,3.3a.872.872,0,0,0,.317,1.2.8.8,0,0,0,.441.124.876.876,0,0,0,.76-.441l.883-1.518a9.529,9.529,0,0,0,18.169,1.73.856.856,0,0,0-.477-1.13Z" transform="translate(-34.096 -172.472)" fill="#fff"/>
+									      <path id="Caminho_3128" data-name="Caminho 3128" d="M323,292.271a.872.872,0,0,0-1.2.317l-.883,1.519a9.529,9.529,0,0,0-18.169-1.73.879.879,0,0,0,1.624.671A7.771,7.771,0,0,1,319.18,294.5l-1.466-.848a.878.878,0,1,0-.884,1.518l3.373,1.942a.979.979,0,0,0,.441.124,1.038,1.038,0,0,0,.229-.035.826.826,0,0,0,.529-.406l1.907-3.3a.89.89,0,0,0-.316-1.219Z" transform="translate(-47.032 -136.624)" fill="#fff"/>
+									    </g>
+									  </g>
+									</svg>
+								</div>	
+								<div class="swiper-button-next swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <defs>
+									    <clipPath id="clip-path">
+									      <rect id="Retângulo_432" data-name="Retângulo 432" width="55.692" height="54.544" fill="#fff" stroke="#fff" stroke-width="1"/>
+									    </clipPath>
+									  </defs>
+									  <g id="Grupo_700" data-name="Grupo 700" transform="translate(-89.25 -2449.25)">
+									    <rect id="Retângulo_431" data-name="Retângulo 431" width="80" height="80" transform="translate(90 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    <g id="Grupo_680" data-name="Grupo 680" transform="translate(103.308 2464.456)">
+									      <g id="Grupo_679" data-name="Grupo 679" clip-path="url(#clip-path)">
+									        <path id="Caminho_3129" data-name="Caminho 3129" d="M335.682,231.572l5.091.281a.852.852,0,0,0,.905-.811.863.863,0,0,0-.811-.9l-6.553-.356-.022,0a.822.822,0,0,0-.57.1.877.877,0,0,0-.221.184c-.015.017-.025.03-.036.043l-.007.009a.792.792,0,0,0-.078.122l-2.706,5.334a.849.849,0,0,0-.049.655.861.861,0,0,0,.43.5.92.92,0,0,0,.39.1.858.858,0,0,0,.766-.478l1.984-3.913L345.664,252.3H327.525a.859.859,0,1,0,0,1.718h19.626a.858.858,0,0,0,.748-1.288Z" transform="translate(-292.32 -205.608)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									        <path id="Caminho_3130" data-name="Caminho 3130" d="M26.207,269.374a.858.858,0,0,0-1.195-.2.861.861,0,0,0-.207,1.2l3.322,4.7H2.346L13.067,256.5a.861.861,0,0,0-.316-1.179.848.848,0,0,0-.423-.112.863.863,0,0,0-.748.432L.115,275.5a.858.858,0,0,0,.743,1.288H28.14L24.8,281.57a.859.859,0,0,0,.7,1.35.861.861,0,0,0,.706-.367l4.281-6.133a.862.862,0,0,0,0-.988Z" transform="translate(0 -228.375)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									        <path id="Caminho_3131" data-name="Caminho 3131" d="M112.719,23.954a.854.854,0,0,0,.384.474.875.875,0,0,0,.156.065l.019.006.051.014c.029.007.055.012.082.015l.027,0a.712.712,0,0,0,.1.006c.042,0,.085,0,.127,0l6.667-.874a.867.867,0,0,0,.738-.968.857.857,0,0,0-.967-.741l-4.958.656L126.733,2.535l10.728,18.581a.857.857,0,0,0,.525.406.845.845,0,0,0,.648-.086.864.864,0,0,0,.316-1.177L127.48.388A.848.848,0,0,0,126.738,0h0a.852.852,0,0,0-.744.388l-12.267,21.24-1.542-4.422a.859.859,0,0,0-.445-.5.844.844,0,0,0-.362-.083.826.826,0,0,0-.282.05.861.861,0,0,0-.534,1.1Z" transform="translate(-98.893)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									      </g>
+									    </g>
+									  </g>
+									</svg>
+								</div>
+							</div>
+						</div>	
+						<div class="conteudo2">
+							<div class="texto3 climaticas">
+								<img src="./assets/images/climaticas.svg">
+								<div>									
+									<h2>Mudanças Climáticas</h2>									
+									<h3>META DE REDUÇÃO ATÉ 2026:</h3>
+									<ul>
+										<li>Reduzir em 67% as emissões de escopo 1 e 2, em relação ao ano base 2019 *</li>										
+									</ul>
+									<p>* Grande parte dessa redução está vinculada a desativação de uma usina térmica localizada no norte do país em uma região que será atendida pelo sistema interligado nacional nos próximos anos.</p>
+								</div>								
+							</div>
+							<div class="texto2">
+								<h2>PRINCIPAIS REALIZAÇÕES EM 2021:</h2>
+								<ul>
+									<li>expansão do portfólio para ofertar produtos e serviços com menor intensidade de carbono</li>
+									<li>criação do Plano de Mudança do Clima dentro da Agenda ESG Estratégica da Vibra, com metas de redução de curto e médio prazo</li>
+									<li>Fomos incluídos no Índice de Resiliência Climática - ICDPR70, devido ao nosso desempenho no CDP e à nossa colocação entre as 100 empresas de maior liquidez da B3,</li>					
+								</ul>
+							</div>
+						</div>								
+					</article>
+
+					<!-- agua -->
+					<article class="swiper-slide">
+						<div class="conteudo1" style="background-image: url(./assets/images/fotos/agua.jpg);">
+							<div class="texto">
+								<p style="font-size: 34px;">Apesar dos processos produtivos da organização como um todo não envolverem o uso intensivo de água, seguimos atuando para preservar os recursos hídricos</p>
+							</div>
+							<div class="botoes">
+								<div class="swiper-button-prev swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_677" data-name="Grupo 677" transform="translate(-309.25 -2449.25)">
+									    <g id="Grupo_8" data-name="Grupo 8" transform="translate(-370.991 582.25)">
+									      <path id="Caminho_3" data-name="Caminho 3" d="M25.049,713.971,63.8,675.224H50.612l13.186-17.7H38.24L25.049,685.75H38.24Z" transform="translate(677.193 1223.779)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+									      <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(680.991 1867.75)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    </g>
+									  </g>
+									</svg>
+								</div>	
+								<div class="swiper-button-prev swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_697" data-name="Grupo 697" transform="translate(-479.25 -18199.25)">
+									    <g id="Grupo_688" data-name="Grupo 688" transform="translate(480 18200)">
+									      <g id="Grupo_678" data-name="Grupo 678">
+									        <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									      </g>
+									      <g id="Grupo_679" data-name="Grupo 679" transform="translate(7.03 10.18)">
+									        <path id="Caminho_3124" data-name="Caminho 3124" d="M132.629,61.8a22.975,22.975,0,1,0,22.976,22.975A23,23,0,0,0,132.629,61.8Zm0,1.475a21.359,21.359,0,0,1,10.361,2.669,4.271,4.271,0,0,0-2.245,1.443c-.347.719-1.278,1.723-1.6,1.669,0,0-.08-.046-.182-.282-.785-1.82-3.254-4.755-4.543-4.648-.7.052-.972.716-1.209,1.3-.42,1.038-.644,1.268-1.174,1.174a7.8,7.8,0,0,0-5.342,1.245,2.379,2.379,0,0,0-1.063,1.648c-.156,1.542.848,2.633,2.987,3.242,1,.281,1.546-.631,1.949-1.3.28-.466.6-.994.937-1.077a1.131,1.131,0,0,1,.745.216c.23.139.463.277.7.414,1.166.687,2.488,1.464,2.536,2.132.026.351-.329.842-1,1.38-2.768,2.227-3.276,3.231-3.92,4.5-.077.151-.155.307-.241.471a4.265,4.265,0,0,1-3.629,1.638,1.4,1.4,0,0,0-1.526.608c-.461.786,0,1.891.587,2.665.516.681.529,1.057.47,1.094-.4,0-1.364-.328-3.292-2.529-.438-.5-.932-1.021-1.436-1.553-1.553-1.638-3.314-3.5-3.545-4.968-.289-1.831-2-3.216-2.99-3.875a21.48,21.48,0,0,1,17.671-9.277Zm.45,30.052c-.235-.181-.5-.356-.77-.537-1.109-.738-1.836-1.3-1.836-2.314,0-1.9.041-2.6.829-3.274.357-.308,1.441-.609,4.678.841.706.316.729.534.773.932a1.7,1.7,0,0,0,1.435,1.676c.366.1.808.188,1.272.279.9.175,2.4.471,2.662.927.017.031.059.1-.014.311a14.562,14.562,0,0,0-.426,1.594c-.378,1.662-.632,2.4-1.491,2.5-1.68.189-2.549,1.593-3.317,2.832a10.433,10.433,0,0,1-1.1,1.565c-1.181,1.277-2.922,3.56-2.561,5.606l-.261.007a4.173,4.173,0,0,1-.88-3.994c.107-.415.26-.939.43-1.521,1.1-3.763,1.788-6.5.582-7.426Zm1.621,12.846c-.449-1.54,1.507-3.822,2.151-4.519a11.53,11.53,0,0,0,1.274-1.789c.675-1.092,1.26-2.034,2.228-2.143,1.99-.225,2.42-2.116,2.765-3.636a13.453,13.453,0,0,1,.38-1.432,1.789,1.789,0,0,0-.1-1.532c-.6-1.041-2.153-1.346-3.658-1.641-.424-.083-.828-.162-1.163-.254a.733.733,0,0,1-.315-.136,1.307,1.307,0,0,1-.046-.277,2.349,2.349,0,0,0-1.637-2.12c-3.119-1.4-5.1-1.591-6.242-.611C129,87.236,129,88.593,129,90.473s1.442,2.842,2.495,3.542c.242.161.477.317.666.457.453.638-.658,4.434-1.077,5.863-.175.6-.333,1.139-.444,1.568a5.7,5.7,0,0,0,.477,4.31,21.48,21.48,0,0,1-16.959-32.423c.881.589,2.143,1.667,2.332,2.865.3,1.924,2.148,3.871,3.932,5.754.491.518.971,1.024,1.4,1.511,1.813,2.068,3.211,3.032,4.4,3.032a1.465,1.465,0,0,0,1.356-.8c.2-.408.387-1.3-.651-2.665a2.371,2.371,0,0,1-.463-.923l.02,0c1.471.207,4.2-.628,5.142-2.412.09-.17.172-.333.252-.491.585-1.155,1.009-1.99,3.529-4.019a3.222,3.222,0,0,0,1.546-2.636c-.105-1.44-1.637-2.342-3.259-3.3q-.341-.2-.679-.4a2.437,2.437,0,0,0-1.863-.386,3.271,3.271,0,0,0-1.847,1.75,5.065,5.065,0,0,1-.4.605c-1.68-.5-1.856-1.11-1.8-1.638a1.086,1.086,0,0,1,.483-.619,6.46,6.46,0,0,1,4.192-.974c1.82.335,2.489-1.29,2.8-2.071.032-.079.07-.171.106-.256a10.236,10.236,0,0,1,2.927,3.634,1.663,1.663,0,0,0,1.5,1.169h.032c1.42,0,2.692-2,2.914-2.467a8.222,8.222,0,0,1,2.592-1.108,21.661,21.661,0,0,1,6.846,7.511,2.99,2.99,0,0,0-2.019.449,2.224,2.224,0,0,0-.85,2.07,6.368,6.368,0,0,1-1.5,5.128,4.176,4.176,0,0,0-.457,4.067,4.53,4.53,0,0,0,3.5,2.725l.495.08a10.846,10.846,0,0,1,2.905.655A21.548,21.548,0,0,1,134.7,106.171Zm19.162-18.022a17.114,17.114,0,0,0-2.964-.624l-.5-.08a3.069,3.069,0,0,1-2.378-1.837,2.68,2.68,0,0,1,.294-2.64,7.784,7.784,0,0,0,1.774-6.077c-.034-.581.177-.735.247-.786a2.567,2.567,0,0,1,1.964.015,21.453,21.453,0,0,1,1.559,12.03Zm-8.815,22.7a.737.737,0,0,1-.372.974,29.334,29.334,0,0,1-8.271,2.322.838.838,0,0,1-.095.006.738.738,0,0,1-.093-1.469,27.881,27.881,0,0,0,7.856-2.206.737.737,0,0,1,.975.373ZM119.59,59.009a.737.737,0,0,1,.349-.983,29.394,29.394,0,0,1,8.485-2.563.738.738,0,1,1,.209,1.461,27.886,27.886,0,0,0-8.06,2.434.736.736,0,0,1-.983-.349Zm13.777,54.634a.737.737,0,0,1-.738.738,29.637,29.637,0,0,1-29.584-28.7l-2.367,2.367L99.635,87l4.125-4.125L107.884,87l-1.043,1.043-2.32-2.32a28.162,28.162,0,0,0,28.109,27.181.737.737,0,0,1,.737.737Zm32.207-31.458-4.125,4.125-4.125-4.125,1.043-1.043,2.361,2.361a28.165,28.165,0,0,0-28.1-26.863.738.738,0,0,1,0-1.475,29.641,29.641,0,0,1,29.575,28.3l2.327-2.327Z" transform="translate(-99.635 -55.165)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+									      </g>
+									    </g>
+									  </g>
+									</svg>
+								</div>
+								<svg class="agua" xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+								  <g id="Grupo_699" data-name="Grupo 699" transform="translate(-199.25 -2449.25)">
+								    <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(200 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+								    <g id="noun-water-drop-773762" transform="translate(-24.78 2341.752)">
+								      <path id="Caminho_3126" data-name="Caminho 3126" d="M264.521,178.248a19.774,19.774,0,0,1-19.741-19.741c0-10.559,18.223-38,19-39.164l.741-1.095.741,1.095c.777,1.165,19,28.587,19,39.164a19.749,19.749,0,0,1-19.739,19.741Zm0-56.786c-3.461,5.315-17.975,28.163-17.975,37.045a17.975,17.975,0,0,0,35.95,0C282.5,149.626,268,126.778,264.521,121.462Z" transform="translate(0)" fill="#fff"/>
+								      <path id="Caminho_3127" data-name="Caminho 3127" d="M306.97,334.281a.885.885,0,0,0-1.147.477,7.771,7.771,0,0,1-14.814-1.448l1.466.848a.878.878,0,0,0,.884-1.518l-3.373-1.942a.872.872,0,0,0-1.2.318l-1.907,3.3a.872.872,0,0,0,.317,1.2.8.8,0,0,0,.441.124.876.876,0,0,0,.76-.441l.883-1.518a9.529,9.529,0,0,0,18.169,1.73.856.856,0,0,0-.477-1.13Z" transform="translate(-34.096 -172.472)" fill="#fff"/>
+								      <path id="Caminho_3128" data-name="Caminho 3128" d="M323,292.271a.872.872,0,0,0-1.2.317l-.883,1.519a9.529,9.529,0,0,0-18.169-1.73.879.879,0,0,0,1.624.671A7.771,7.771,0,0,1,319.18,294.5l-1.466-.848a.878.878,0,1,0-.884,1.518l3.373,1.942a.979.979,0,0,0,.441.124,1.038,1.038,0,0,0,.229-.035.826.826,0,0,0,.529-.406l1.907-3.3a.89.89,0,0,0-.316-1.219Z" transform="translate(-47.032 -136.624)" fill="#fff"/>
+								    </g>
+								  </g>
+								</svg>
+								<div class="swiper-button-next swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <defs>
+									    <clipPath id="clip-path">
+									      <rect id="Retângulo_432" data-name="Retângulo 432" width="55.692" height="54.544" fill="#fff" stroke="#fff" stroke-width="1"/>
+									    </clipPath>
+									  </defs>
+									  <g id="Grupo_700" data-name="Grupo 700" transform="translate(-89.25 -2449.25)">
+									    <rect id="Retângulo_431" data-name="Retângulo 431" width="80" height="80" transform="translate(90 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    <g id="Grupo_680" data-name="Grupo 680" transform="translate(103.308 2464.456)">
+									      <g id="Grupo_679" data-name="Grupo 679" clip-path="url(#clip-path)">
+									        <path id="Caminho_3129" data-name="Caminho 3129" d="M335.682,231.572l5.091.281a.852.852,0,0,0,.905-.811.863.863,0,0,0-.811-.9l-6.553-.356-.022,0a.822.822,0,0,0-.57.1.877.877,0,0,0-.221.184c-.015.017-.025.03-.036.043l-.007.009a.792.792,0,0,0-.078.122l-2.706,5.334a.849.849,0,0,0-.049.655.861.861,0,0,0,.43.5.92.92,0,0,0,.39.1.858.858,0,0,0,.766-.478l1.984-3.913L345.664,252.3H327.525a.859.859,0,1,0,0,1.718h19.626a.858.858,0,0,0,.748-1.288Z" transform="translate(-292.32 -205.608)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									        <path id="Caminho_3130" data-name="Caminho 3130" d="M26.207,269.374a.858.858,0,0,0-1.195-.2.861.861,0,0,0-.207,1.2l3.322,4.7H2.346L13.067,256.5a.861.861,0,0,0-.316-1.179.848.848,0,0,0-.423-.112.863.863,0,0,0-.748.432L.115,275.5a.858.858,0,0,0,.743,1.288H28.14L24.8,281.57a.859.859,0,0,0,.7,1.35.861.861,0,0,0,.706-.367l4.281-6.133a.862.862,0,0,0,0-.988Z" transform="translate(0 -228.375)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									        <path id="Caminho_3131" data-name="Caminho 3131" d="M112.719,23.954a.854.854,0,0,0,.384.474.875.875,0,0,0,.156.065l.019.006.051.014c.029.007.055.012.082.015l.027,0a.712.712,0,0,0,.1.006c.042,0,.085,0,.127,0l6.667-.874a.867.867,0,0,0,.738-.968.857.857,0,0,0-.967-.741l-4.958.656L126.733,2.535l10.728,18.581a.857.857,0,0,0,.525.406.845.845,0,0,0,.648-.086.864.864,0,0,0,.316-1.177L127.48.388A.848.848,0,0,0,126.738,0h0a.852.852,0,0,0-.744.388l-12.267,21.24-1.542-4.422a.859.859,0,0,0-.445-.5.844.844,0,0,0-.362-.083.826.826,0,0,0-.282.05.861.861,0,0,0-.534,1.1Z" transform="translate(-98.893)" fill="#fff" stroke="#fff" stroke-width="1"/>
+									      </g>
+									    </g>
+									  </g>
+									</svg>
+								</div>
+							</div>
+						</div>	
+						<div class="conteudo2">
+							<div class="texto3 agua">
+								<img src="./assets/images/agua.svg">
+								<div>									
+									<h2>Água e efluentes</h2>									
+									<h3>META ATÉ 2024:</h3>
+									<ul style="padding-bottom: 30px;">
+										<li>reduzir em pelo menos 10% a captação total de nossas instalações (comparado a 2019)</li>
+									</ul>									
+								</div>								
+							</div>
+							<div class="texto2">
+								<h2>PRINCIPAIS REALIZAÇÕES EM 2021:</h2>
+								<ul>
+									<li>mapeamento geográfico das unidades que estão localizadas em áreas de estresse hídrico. Resultado: a captação de água nestas localidades representa menos de 1% do volume total captado para nossas operações no ano</li>
+									<li>2.000.000 L de água de chuva captada e tratada para reuso</li>
+								</ul>
+							</div>
+						</div>								
+					</article>
+
+					<!-- residuos -->
+					<article class="swiper-slide">
+						<div class="conteudo1" style="background-image: url(./assets/images/fotos/lubrax.jpg);">
+							<div class="texto" style="position: relative; bottom: -50%;">
+								<p style="font-size: 29px">Nossa gestão do uso de materiais e geração de resíduos é um ponto de permanente de atenção e cuidados, sendo baseada na Política Nacional de Resíduo Sólidos e orientada por nossa Política de Segurança, Saúde e Meio Ambiente (SSMA).</p>
+							</div>
+							
+							<div class="botoes">
+								<div class="swiper-button-prev swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_677" data-name="Grupo 677" transform="translate(-309.25 -2449.25)">
+									    <g id="Grupo_8" data-name="Grupo 8" transform="translate(-370.991 582.25)">
+									      <path id="Caminho_3" data-name="Caminho 3" d="M25.049,713.971,63.8,675.224H50.612l13.186-17.7H38.24L25.049,685.75H38.24Z" transform="translate(677.193 1223.779)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+									      <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(680.991 1867.75)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    </g>
+									  </g>
+									</svg>
+								</div>	
+								<div class="swiper-button-prev swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_697" data-name="Grupo 697" transform="translate(-479.25 -18199.25)">
+									    <g id="Grupo_688" data-name="Grupo 688" transform="translate(480 18200)">
+									      <g id="Grupo_678" data-name="Grupo 678">
+									        <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									      </g>
+									      <g id="Grupo_679" data-name="Grupo 679" transform="translate(7.03 10.18)">
+									        <path id="Caminho_3124" data-name="Caminho 3124" d="M132.629,61.8a22.975,22.975,0,1,0,22.976,22.975A23,23,0,0,0,132.629,61.8Zm0,1.475a21.359,21.359,0,0,1,10.361,2.669,4.271,4.271,0,0,0-2.245,1.443c-.347.719-1.278,1.723-1.6,1.669,0,0-.08-.046-.182-.282-.785-1.82-3.254-4.755-4.543-4.648-.7.052-.972.716-1.209,1.3-.42,1.038-.644,1.268-1.174,1.174a7.8,7.8,0,0,0-5.342,1.245,2.379,2.379,0,0,0-1.063,1.648c-.156,1.542.848,2.633,2.987,3.242,1,.281,1.546-.631,1.949-1.3.28-.466.6-.994.937-1.077a1.131,1.131,0,0,1,.745.216c.23.139.463.277.7.414,1.166.687,2.488,1.464,2.536,2.132.026.351-.329.842-1,1.38-2.768,2.227-3.276,3.231-3.92,4.5-.077.151-.155.307-.241.471a4.265,4.265,0,0,1-3.629,1.638,1.4,1.4,0,0,0-1.526.608c-.461.786,0,1.891.587,2.665.516.681.529,1.057.47,1.094-.4,0-1.364-.328-3.292-2.529-.438-.5-.932-1.021-1.436-1.553-1.553-1.638-3.314-3.5-3.545-4.968-.289-1.831-2-3.216-2.99-3.875a21.48,21.48,0,0,1,17.671-9.277Zm.45,30.052c-.235-.181-.5-.356-.77-.537-1.109-.738-1.836-1.3-1.836-2.314,0-1.9.041-2.6.829-3.274.357-.308,1.441-.609,4.678.841.706.316.729.534.773.932a1.7,1.7,0,0,0,1.435,1.676c.366.1.808.188,1.272.279.9.175,2.4.471,2.662.927.017.031.059.1-.014.311a14.562,14.562,0,0,0-.426,1.594c-.378,1.662-.632,2.4-1.491,2.5-1.68.189-2.549,1.593-3.317,2.832a10.433,10.433,0,0,1-1.1,1.565c-1.181,1.277-2.922,3.56-2.561,5.606l-.261.007a4.173,4.173,0,0,1-.88-3.994c.107-.415.26-.939.43-1.521,1.1-3.763,1.788-6.5.582-7.426Zm1.621,12.846c-.449-1.54,1.507-3.822,2.151-4.519a11.53,11.53,0,0,0,1.274-1.789c.675-1.092,1.26-2.034,2.228-2.143,1.99-.225,2.42-2.116,2.765-3.636a13.453,13.453,0,0,1,.38-1.432,1.789,1.789,0,0,0-.1-1.532c-.6-1.041-2.153-1.346-3.658-1.641-.424-.083-.828-.162-1.163-.254a.733.733,0,0,1-.315-.136,1.307,1.307,0,0,1-.046-.277,2.349,2.349,0,0,0-1.637-2.12c-3.119-1.4-5.1-1.591-6.242-.611C129,87.236,129,88.593,129,90.473s1.442,2.842,2.495,3.542c.242.161.477.317.666.457.453.638-.658,4.434-1.077,5.863-.175.6-.333,1.139-.444,1.568a5.7,5.7,0,0,0,.477,4.31,21.48,21.48,0,0,1-16.959-32.423c.881.589,2.143,1.667,2.332,2.865.3,1.924,2.148,3.871,3.932,5.754.491.518.971,1.024,1.4,1.511,1.813,2.068,3.211,3.032,4.4,3.032a1.465,1.465,0,0,0,1.356-.8c.2-.408.387-1.3-.651-2.665a2.371,2.371,0,0,1-.463-.923l.02,0c1.471.207,4.2-.628,5.142-2.412.09-.17.172-.333.252-.491.585-1.155,1.009-1.99,3.529-4.019a3.222,3.222,0,0,0,1.546-2.636c-.105-1.44-1.637-2.342-3.259-3.3q-.341-.2-.679-.4a2.437,2.437,0,0,0-1.863-.386,3.271,3.271,0,0,0-1.847,1.75,5.065,5.065,0,0,1-.4.605c-1.68-.5-1.856-1.11-1.8-1.638a1.086,1.086,0,0,1,.483-.619,6.46,6.46,0,0,1,4.192-.974c1.82.335,2.489-1.29,2.8-2.071.032-.079.07-.171.106-.256a10.236,10.236,0,0,1,2.927,3.634,1.663,1.663,0,0,0,1.5,1.169h.032c1.42,0,2.692-2,2.914-2.467a8.222,8.222,0,0,1,2.592-1.108,21.661,21.661,0,0,1,6.846,7.511,2.99,2.99,0,0,0-2.019.449,2.224,2.224,0,0,0-.85,2.07,6.368,6.368,0,0,1-1.5,5.128,4.176,4.176,0,0,0-.457,4.067,4.53,4.53,0,0,0,3.5,2.725l.495.08a10.846,10.846,0,0,1,2.905.655A21.548,21.548,0,0,1,134.7,106.171Zm19.162-18.022a17.114,17.114,0,0,0-2.964-.624l-.5-.08a3.069,3.069,0,0,1-2.378-1.837,2.68,2.68,0,0,1,.294-2.64,7.784,7.784,0,0,0,1.774-6.077c-.034-.581.177-.735.247-.786a2.567,2.567,0,0,1,1.964.015,21.453,21.453,0,0,1,1.559,12.03Zm-8.815,22.7a.737.737,0,0,1-.372.974,29.334,29.334,0,0,1-8.271,2.322.838.838,0,0,1-.095.006.738.738,0,0,1-.093-1.469,27.881,27.881,0,0,0,7.856-2.206.737.737,0,0,1,.975.373ZM119.59,59.009a.737.737,0,0,1,.349-.983,29.394,29.394,0,0,1,8.485-2.563.738.738,0,1,1,.209,1.461,27.886,27.886,0,0,0-8.06,2.434.736.736,0,0,1-.983-.349Zm13.777,54.634a.737.737,0,0,1-.738.738,29.637,29.637,0,0,1-29.584-28.7l-2.367,2.367L99.635,87l4.125-4.125L107.884,87l-1.043,1.043-2.32-2.32a28.162,28.162,0,0,0,28.109,27.181.737.737,0,0,1,.737.737Zm32.207-31.458-4.125,4.125-4.125-4.125,1.043-1.043,2.361,2.361a28.165,28.165,0,0,0-28.1-26.863.738.738,0,0,1,0-1.475,29.641,29.641,0,0,1,29.575,28.3l2.327-2.327Z" transform="translate(-99.635 -55.165)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+									      </g>
+									    </g>
+									  </g>
+									</svg>
+								</div>	
+								<div class="swiper-button-prev swiper-button-white">
+									<svg xmlns="http://www.w3.org/2000/svg" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+									  <g id="Grupo_699" data-name="Grupo 699" transform="translate(-199.25 -2449.25)">
+									    <rect id="Retângulo_25" data-name="Retângulo 25" width="80" height="80" transform="translate(200 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+									    <g id="noun-water-drop-773762" transform="translate(-24.78 2341.752)">
+									      <path id="Caminho_3126" data-name="Caminho 3126" d="M264.521,178.248a19.774,19.774,0,0,1-19.741-19.741c0-10.559,18.223-38,19-39.164l.741-1.095.741,1.095c.777,1.165,19,28.587,19,39.164a19.749,19.749,0,0,1-19.739,19.741Zm0-56.786c-3.461,5.315-17.975,28.163-17.975,37.045a17.975,17.975,0,0,0,35.95,0C282.5,149.626,268,126.778,264.521,121.462Z" transform="translate(0)" fill="#fff"/>
+									      <path id="Caminho_3127" data-name="Caminho 3127" d="M306.97,334.281a.885.885,0,0,0-1.147.477,7.771,7.771,0,0,1-14.814-1.448l1.466.848a.878.878,0,0,0,.884-1.518l-3.373-1.942a.872.872,0,0,0-1.2.318l-1.907,3.3a.872.872,0,0,0,.317,1.2.8.8,0,0,0,.441.124.876.876,0,0,0,.76-.441l.883-1.518a9.529,9.529,0,0,0,18.169,1.73.856.856,0,0,0-.477-1.13Z" transform="translate(-34.096 -172.472)" fill="#fff"/>
+									      <path id="Caminho_3128" data-name="Caminho 3128" d="M323,292.271a.872.872,0,0,0-1.2.317l-.883,1.519a9.529,9.529,0,0,0-18.169-1.73.879.879,0,0,0,1.624.671A7.771,7.771,0,0,1,319.18,294.5l-1.466-.848a.878.878,0,1,0-.884,1.518l3.373,1.942a.979.979,0,0,0,.441.124,1.038,1.038,0,0,0,.229-.035.826.826,0,0,0,.529-.406l1.907-3.3a.89.89,0,0,0-.316-1.219Z" transform="translate(-47.032 -136.624)" fill="#fff"/>
+									    </g>
+									  </g>
+									</svg>
+								</div>
+								<svg class="residuos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="81.5" height="81.5" viewBox="0 0 81.5 81.5">
+								  <defs>
+								    <clipPath id="clip-path">
+								      <rect id="Retângulo_432" data-name="Retângulo 432" width="55.692" height="54.544" fill="#fff" stroke="#fff" stroke-width="1"/>
+								    </clipPath>
+								  </defs>
+								  <g id="Grupo_700" data-name="Grupo 700" transform="translate(-89.25 -2449.25)">
+								    <rect id="Retângulo_431" data-name="Retângulo 431" width="80" height="80" transform="translate(90 2450)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="1.5"/>
+								    <g id="Grupo_680" data-name="Grupo 680" transform="translate(103.308 2464.456)">
+								      <g id="Grupo_679" data-name="Grupo 679" clip-path="url(#clip-path)">
+								        <path id="Caminho_3129" data-name="Caminho 3129" d="M335.682,231.572l5.091.281a.852.852,0,0,0,.905-.811.863.863,0,0,0-.811-.9l-6.553-.356-.022,0a.822.822,0,0,0-.57.1.877.877,0,0,0-.221.184c-.015.017-.025.03-.036.043l-.007.009a.792.792,0,0,0-.078.122l-2.706,5.334a.849.849,0,0,0-.049.655.861.861,0,0,0,.43.5.92.92,0,0,0,.39.1.858.858,0,0,0,.766-.478l1.984-3.913L345.664,252.3H327.525a.859.859,0,1,0,0,1.718h19.626a.858.858,0,0,0,.748-1.288Z" transform="translate(-292.32 -205.608)" fill="#fff" stroke="#fff" stroke-width="1"/>
+								        <path id="Caminho_3130" data-name="Caminho 3130" d="M26.207,269.374a.858.858,0,0,0-1.195-.2.861.861,0,0,0-.207,1.2l3.322,4.7H2.346L13.067,256.5a.861.861,0,0,0-.316-1.179.848.848,0,0,0-.423-.112.863.863,0,0,0-.748.432L.115,275.5a.858.858,0,0,0,.743,1.288H28.14L24.8,281.57a.859.859,0,0,0,.7,1.35.861.861,0,0,0,.706-.367l4.281-6.133a.862.862,0,0,0,0-.988Z" transform="translate(0 -228.375)" fill="#fff" stroke="#fff" stroke-width="1"/>
+								        <path id="Caminho_3131" data-name="Caminho 3131" d="M112.719,23.954a.854.854,0,0,0,.384.474.875.875,0,0,0,.156.065l.019.006.051.014c.029.007.055.012.082.015l.027,0a.712.712,0,0,0,.1.006c.042,0,.085,0,.127,0l6.667-.874a.867.867,0,0,0,.738-.968.857.857,0,0,0-.967-.741l-4.958.656L126.733,2.535l10.728,18.581a.857.857,0,0,0,.525.406.845.845,0,0,0,.648-.086.864.864,0,0,0,.316-1.177L127.48.388A.848.848,0,0,0,126.738,0h0a.852.852,0,0,0-.744.388l-12.267,21.24-1.542-4.422a.859.859,0,0,0-.445-.5.844.844,0,0,0-.362-.083.826.826,0,0,0-.282.05.861.861,0,0,0-.534,1.1Z" transform="translate(-98.893)" fill="#fff" stroke="#fff" stroke-width="1"/>
+								      </g>
+								    </g>
+								  </g>
+								</svg>
+							</div>
+						</div>	
+						<div class="conteudo2">
+							<div class="texto3 residuos">
+								<img src="./assets/images/residuos.svg">
+								<div>									
+									<h2>Resíduos e Materiais</h2>
+								</div>								
+							</div>
+							<div class="texto2">
+								<h2>PRINCIPAIS REALIZAÇÕES EM 2021:</h2>
+								<ul>
+									<li>aproximadamente 412 toneladas de tambores vazios enviadas para operações de recuperação</li>
+									<li>29% do total das embalagens plásticas de 1L comercializadas foram coletadas e enviadas para reciclagem (percentual acima da meta de 20% inicialmente estipulada para o ano)</li>
+									<li>Aquisição de 4.510 m3 de óleo básico rerrefinado para ser usado em nossas formulações</li>
+									<li>34% do total de resíduos gerados em nossas instalações administrativas e operacionais foram enviados para operações de recuperação (reuso, reciclagem e outras), totalizando 1.555 toneladas</li>
+								</ul>
+							</div>
+						</div>								
+					</article>
+				</div>				
 				<!-- Add Navigation -->
-				<!-- <div class="swiper-button-prev swiper-button-white">
-					<img class="seta1" src="./assets/images/seta-slide-esq.png">
-				</div>	 -->
-
-				<!-- <div class="swiper-button-next swiper-button-white">
-					<img class="seta1" src="./assets/images/seta-slide-dir.png">
-				</div> -->
+				<article class="seta">
+					<div class="swiper-button-next swiper-button-white">
+						<img class="seta1" src="./assets/images/seta-slide3.png">
+						<img class="seta2" src="./assets/images/seta-slide.png">
+					</div>	
+				</article>
 							
 			</div>			
 		</section>
 	</main>
+	<footer id="footer">
+		<section>
+			<div class="logo">
+				<img src="./assets/images/vibra2.png" alt="Vibra" title="Vibra">
+				<p>RELATÓRIO DE SUSTENTABILIDADE 2021</p>
+			</div>
+			<div class="seta">
+				<a href="#" id="topo" class="topo">
+					<img src="./assets/images/seta-topo.png" alt="Inicio da Página">
+					<img class="seta2" src="./assets/images/seta-topo2.png" alt="Inicio da Página">
+				</a>
+				<p>Voltar<br>ao início</p>
+			</div>
+			
 
-	<!-- <footer id="footer">
-		
-	</footer> -->
+		</section>
+		<!-- <script type="text/javascript">
+			jQuery(function($) {		        
+		    	$('#topo').click(function(e) {
+					$('html, body').animate({scrollTop: 0}, 1000);
+					return false;
+		    	});
+			});
+		</script> -->
+	</footer>
 </body>
 </html>
