@@ -38,6 +38,11 @@ jQuery(document).ready(function($) {
       },
       autoplay: {
         delay: 5000,
+      },
+      breakpoints: {
+        992: {
+          autoHeight: true,         
+        }, 
       },    
     });
 
@@ -65,21 +70,22 @@ jQuery(document).ready(function($) {
   // slide da slide-ambiental
     var swiper = new Swiper('.slide-ambiental', {
       speed: 1000,
-      parallax: true,
       loop: true,
       spaceBetween: 30,
-      effect: 'fade',
+      effect: 'fade',     
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      /*autoplay: {
-        delay: 5000,
-      },    */
+     
+      breakpoints: {
+        992: {
+          autoHeight: true,         
+        }, 
+      },
     }); 
 });
