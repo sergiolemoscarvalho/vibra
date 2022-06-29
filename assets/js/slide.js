@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
       spaceBetween: 30,
       effect: 'fade',
       pagination: {
-        el: '.swiper-pagination',
+        el: '.paginacao1',
         clickable: true,
 
       },
@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
       spaceBetween: 30,
       effect: 'fade',
       pagination: {
-        el: '.swiper-pagination',
+        el: '.paginacao2',
         clickable: true,
 
       },
@@ -54,9 +54,8 @@ jQuery(document).ready(function($) {
       spaceBetween: 30,
       effect: 'fade',
       pagination: {
-        el: '.swiper-pagination',
+        el: '.paginacao3',
         clickable: true,
-
       },
       navigation: {
         nextEl: '.swiper-button-next',
@@ -72,11 +71,7 @@ jQuery(document).ready(function($) {
       speed: 1000,
       loop: true,
       spaceBetween: 30,
-      effect: 'fade',     
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+      effect: 'fade', 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
