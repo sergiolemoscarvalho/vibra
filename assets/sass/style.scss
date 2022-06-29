@@ -1,0 +1,3226 @@
+@import
+        "bootstrap/bootstrap", // Bootstrap   Styles Core
+        url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+body{
+        width: 100%;
+        background: #fff;
+}
+@font-face {
+    font-family: 'Acumin Pro Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Thin'), url('../fonts/Acumin-Pro/Acumin-Pro-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Acumin Pro Extra Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Extra Light'), url('../fonts/Acumin-Pro/Acumin-Pro-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Acumin Pro';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro'), url('../fonts/Acumin-Pro/Acumin-RPro.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Acumin Pro Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Italic'), url('../fonts/Acumin-Pro/Acumin-ItPro.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Acumin Pro Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Bold'), url('../fonts/Acumin-Pro/Acumin-BdPro.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Acumin Pro Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Acumin Pro Bold Italic'), url('../fonts/Acumin-Pro/Acumin-BdItPro.woff') format('woff');
+}
+
+h1, h2, h3, h4, h5, b, title{   
+        font-family: 'Acumin Pro';
+        letter-spacing: 0.6px;
+}
+strong{   
+        font-family: 'Acumin Pro Bold';
+        letter-spacing: 0.6px;
+}
+p, a, span{
+        font-family: 'Acumin Pro Extra Light';
+        letter-spacing: 0.6px;
+}
+i{
+       font-family: 'Acumin Pro Italic';
+       letter-spacing: 0.6px; 
+}
+
+//Scroll Personalizado
+        /* 1 */
+        ::-webkit-scrollbar{ 
+                width: 15px;
+        }
+
+        /* 2 */ 
+        ::-webkit-scrollbar-button{
+                display: none;
+        }
+
+        /* 3 */ 
+        ::-webkit-scrollbar-track{ 
+                background:  #cdcfd1;
+        }
+
+        /* 4 */ 
+        ::-webkit-scrollbar-track-piece{ 
+            border: 2px solid #cdcfd1;
+            border-radius: 10px;
+        }
+
+        /* 5 */ 
+        ::-webkit-scrollbar-thumb{ 
+            background: #eeeeee;
+            border-radius: 10px;
+            border: 1px solid #eeeeee;
+        }
+//----------------------------------
+
+.desktop{
+        @media screen and (max-width: 768px) and (min-width: 220px) {
+               display: none !important;
+        }
+}
+.mobile{
+        display: none !important;;
+        @media screen and (max-width: 767px) and (min-width: 220px) {
+                display: flex !important;
+        }
+}
+
+//Efeitos de animação
+        //Efeito Subir
+            .E-subir{
+                opacity: 0;
+                transform: translate3d(0,100px,0);
+                transition: all 1.5s;
+                @media screen and (max-width: 768px) and (min-width: 425px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+                @media screen and (max-width: 425px) and (min-width: 10px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+            }
+            .E-subir-start{
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transition: all 1.5s;
+        }
+    //-------------
+    //Efeito Descer
+            .E-descer{
+                opacity: 0;
+                transform: translate3d(0,-100px,0);
+                transition: all 1.5s;
+                @media screen and (max-width: 768px) and (min-width: 425px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+                @media screen and (max-width: 425px) and (min-width: 10px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+            }
+            .E-descer-start{
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transition: all 1.5s;
+        }
+    //-------------
+    //Efeito direita
+            .E-direita{
+                opacity: 0;
+                transform: translate3d(-100px,0,0);
+                transition: all 1.5s;
+                @media screen and (max-width: 768px) and (min-width: 425px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+                @media screen and (max-width: 425px) and (min-width: 10px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+            }
+            .E-direita-start{
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transition: all 1.5s;
+        }
+    //-------------
+    //Efeito esquerda
+            .E-esquerda{
+                opacity: 0;
+                transform: translate3d(100px,0,0);
+                transition: all 1.5s;
+                @media screen and (max-width: 768px) and (min-width: 425px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+                @media screen and (max-width: 425px) and (min-width: 10px) {
+                        opacity: 1;
+                        transform: translate3d(0,0,0);
+                }
+            }
+            .E-esquerda-start{
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transition: all 1.5s;
+        }
+    //-------------
+    //Efeito Fadein
+            .E-fadein{
+                opacity: 0;
+                transform: translate3d(0,0,0);
+                transition: all 1.5s;
+                @media screen and (max-width: 768px) and (min-width: 425px) {
+                        opacity: 1;
+                }
+                @media screen and (max-width: 425px) and (min-width: 10px) {
+                        opacity: 1;
+                }
+            }
+            .E-fadein-start{
+                opacity: 1;
+                transform: translate3d(0,0,0);
+                transition: all 1.5s;
+            }
+    //-------------
+//----------------------
+
+.container{
+        padding: 0px 55px;
+}
+
+.margen-lateral{
+       /* padding-left: 300px !important;*/
+}  
+header{
+        background: #fff;
+        width: 100%;
+        padding: 0px;        
+        .menu{
+                width: 15vw;
+                height: 100vh;
+                position: fixed;
+                background: transparent;
+                top: 0px;
+                left: 0;
+                transition: all .4s;
+                z-index: 999;
+                @media screen and (max-width: 1324px){
+                        display: none !important;
+                }
+                @media screen and (max-width: 1024px) and (min-width: 461px) {
+                        top: 0px;
+                        background: #f2f3f2;
+                        z-index: 999;
+                }
+                @media screen and (max-width: 460px) and (min-width: 220px) {                   
+                        top: 0px;
+                        background: #f2f3f2;
+                        z-index: 999;
+                }
+               
+                .barra-contato{
+                        background: #fff;
+                        width: 150px;
+                        height: 100vh;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        padding: 10px 0;
+                        .logo-principal{
+                                position: relative;
+                                margin: 100px 0 0 35px;
+                                z-index: 9;
+                                img{
+                                        max-width: 100%;
+                                        width: 100%;
+                                }
+                                .cor{
+                                        position: absolute;
+                                        transition: all .3s;
+                                        left: 12%;
+                                        opacity: 0;
+                                        &:hover{                               
+                                                transition: all .3s;
+                                                opacity: 1;
+                                        }
+                                }                                
+                        }
+                        .botoes{
+                                position:relative;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                margin-right: 7px;                                
+                        } 
+                        .btn-reserve{
+                                color: #fff;
+                                background: #b0c800;
+                                padding: 5px 8px;
+                                font-size: 0.75em;
+                                text-transform: uppercase;
+                        }
+                }
+
+                #menu-trigger {
+                        width: 70px;
+                        height: 65px;
+                        position: absolute;
+                        top: -12px;
+                        right: -110px;
+                        cursor: pointer;
+                        z-index: 999;  
+                        border: 2px solid #474c48;
+                        background: #474c48;
+                        @media screen and (max-width: 460px) and (min-width: 220px) {                   
+                                right: -40px;
+                                top: -20px;
+                        }
+                }
+
+                .menu-trigger  div {
+                    width: 30px;
+                    height: 4px;
+                    background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                    margin-top: 3px;
+                }
+                .traducao{
+                        position: absolute;
+                        bottom: 150px;
+                        margin-left: 35px;
+                        font-size: 1.375em;
+                        color: #4A4D4A;
+                        z-index: 999;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        a{
+                                margin: 0 2px;
+                        }   
+                }
+                .pdf{
+                        position: absolute;
+                        bottom: 100px;
+                        margin-left: 35px;
+                        font-size: 1.375em;
+                        color: #4A4D4A;
+                        z-index: 999;
+                }
+                .seta-baixo{
+                        position: absolute;
+                        bottom: 0px;
+                        margin-left: 35px;
+                        font-size: 1.375em;
+                        color: #4A4D4A;
+                        z-index: 999;
+                }
+                .conteudo{
+                        position: absolute;
+                        background: #fff;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100vh;   
+                        opacity: 0;
+                        top: 0; 
+                        z-index: 99;
+                        transition: .4s all;
+                        .logo-principal2{
+                                position: relative;
+                                z-index: 1;
+                                margin: 110px 0 0 35px;
+                                img{
+                                        max-width: 100%;
+                                        width: 100%;
+                                        padding-right: 10px
+                                }
+                        }
+                        nav{
+                                margin-left: 35px;
+                                p{
+                                        letter-spacing: 0.7px;
+                                        color: #257b00;
+                                        font-weight: 600;
+                                        line-height: 1;
+                                        margin-top: 50px;
+                                }
+                                ul{
+                                        margin: 50px 0 150px;
+                                        padding: 0;
+                                        li{
+                                                list-style: none;
+                                                margin: 20px 0;
+                                                a{
+                                                        color: #858585b8;
+                                                        transition: all .4s;
+                                                        font-size: 1.125em;
+                                                        font-weight: 500;
+                                                        text-decoration: none; 
+                                                        &:hover{
+                                                                color: #257b00;
+                                                                transition: all .4s;
+                                                        }
+                                                }
+                                        }
+                                }                                 
+                                .pdf{
+                                        margin-left: 0px;                                       
+                                }                               
+                        }
+                }
+                
+                #check{
+                        position: absolute;
+                        z-index: 1;
+                        width: 50px;
+                        height: 45px;
+                        top: -1px;
+                        margin: 0;
+                        right: -2px;
+                        opacity: 0;
+                        cursor: pointer;
+                }
+                span{
+                        width: 35px;
+                        height: 4px;
+                        top: 28px;
+                        left: 16px;
+                        position: absolute;
+                        background: #fff;
+                        transition: all .3s linear;                     
+                        &:before{
+                                content:'';
+                                width: 35px;
+                                height: 4px;
+                                bottom: -10px;
+                                position: absolute;
+                                background: #fff;
+                                transition: all .3s linear;
+                        }
+                        &:after{
+                                content:'';
+                                width: 35px;
+                                height: 4px;
+                                top: -10px;
+                                position: absolute;
+                                background: #fff;
+                                transition: all .3s linear;
+                        }
+                }
+                #check:checked ~ span{
+                        background: transparent;
+                }
+                #check:checked ~ span:before{
+                        transform: translate(0px, -10px) rotate(-45deg);
+                        background: #fff;
+                }
+                #check:checked ~ span:after{
+                        transform: translate(0px, 10px) rotate(45deg);
+                        background: #fff;
+                }
+                #check:checked ~ label{
+                        border-radius: 50%;
+                }
+        }
+        .menu-mobile{
+                width: 100%;
+                position: fixed;
+                background: #fff;
+                top: 0px;
+                left: 0;
+                 -webkit-box-shadow: 3px 3px 20px -15px rgba(0,0,0,0.66);
+                -moz-box-shadow: 3px 3px 20px -15px rgba(0,0,0,0.66);
+                box-shadow: 3px 3px 20px -15px rgba(0,0,0,0.66);
+                transition: all .4s;
+                z-index: 99;
+                display: none;
+                @media screen and (max-width: 1324px){
+                    display: block;
+                }
+                .barra{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0px 0px;
+                        background: #004206;;
+                        height: 100px;
+                        .logo{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: #fff;
+                                margin-top: 95px;
+                                padding: 15px 0px; 
+                                img{
+                                        width: 186px;
+                                }                                         
+                        }
+                        .btn-reserve{
+                                color: #fff;
+                                background: #b0c800;
+                                padding: 5px 8px;
+                                font-size: 0.75em;
+                                text-transform: uppercase;
+                        }
+                }
+
+                #menu-trigger2{
+                        position: absolute;
+                        transform: translateX(50%);
+                        top: 8%;
+                        right: 50%;
+                        width: 45px;
+                        height: 40px;
+                        cursor: pointer;
+                        z-index: 999;        
+                }
+
+                .menu-trigger2  div{
+                    width: 30px;
+                    height: 4px;
+                    background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+                    margin-top: 3px;
+                }
+
+                .conteudo{
+                        position: absolute;
+                        background: #004206;
+                        display: none;
+                        width: 100%;
+                        height: 100%;                                  
+                        left: 0;                                        
+                        top: 0;
+                        z-index: 99; 
+                        transition: all .4s;                                                                        
+                        h4{
+                                font-size: 1.125em;
+                                text-transform: uppercase;
+                                color: #31a430;
+                                margin-bottom: 5px;  
+                        }
+                        .box-menu{
+                                margin: 50px 0 0 0px;
+                                padding: 0;   
+                                border-top: 1px solid #ffffff73;                            
+                                .main-navigation2{
+                                        background-color: transparent;
+                                        border-color: transparent;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: flex-start;
+                                        flex-direction: column;
+                                        width: 100%;
+                                        .navbar-header{
+                                                float: left;
+                                                width: 100%;
+                                        }
+                                        ul{
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: flex-start;
+                                                flex-direction: column;
+                                                width: 100%; 
+                                                background: #004206;
+                                                padding:0;
+                                                margin: 0;
+                                                li{
+                                                        width: 100%; 
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center; 
+                                                        border-bottom: 1px solid #ffffff73;                                                 
+                                                        a{
+                                                                padding: 20px 0;
+                                                                font-size: 1.25em;
+                                                                color: #fff;
+                                                                font-weight: 400;
+                                                        }
+                                                        &.active a{ 
+                                                                color: #F07D00;
+                                                                background: #363636 0% 0% no-repeat padding-box;
+                                                                &:hover{ 
+                                                                        transition: all 0.3s;
+                                                                        background: #004206;
+                                                                } 
+                                                        }
+                                                }
+                                                .pdf{
+                                                        padding: 20px 0;
+                                                        color: #fff;
+                                                        font-size: 1.25em;
+                                                        text-align: center;
+                                                        width: 100%;
+                                                }
+                                        }
+                                }
+                        }                
+                }
+        
+                #check2{
+                    position: absolute;
+                    z-index: 1;
+                    width: 50px;
+                    height: 45px;
+                    top: -3px;
+                    margin: 0;
+                    right: -5px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                span{
+                        width: 33px;
+                        height: 3px;
+                        top: 16px;
+                        right: 8px;
+                        position: absolute;
+                        background: #fff;
+                        transition: all .3s linear;                     
+                        &:before{
+                                content:'';
+                                width: 33px;
+                                height: 3px;
+                                bottom: -10px;
+                                position: absolute;
+                                background: #fff;
+                                transition: all .3s linear;
+                        }
+                        &:after{
+                                content:'';
+                                width: 33px;
+                                height: 3px;
+                                top: -10px;
+                                position: absolute;
+                                background: #fff;
+                                transition: all .3s linear;
+                        }
+                }
+                #check2:checked ~ span{
+                    background: transparent;
+                }
+                #check2:checked ~ span:before{
+                    transform: translate(0px, -10px) rotate(-45deg);
+                    background: #fff;
+                }
+                #check2:checked ~ span:after{
+                    transform: translate(0px, 10px) rotate(45deg);
+                    background: #fff;
+                }
+                #check2:checked ~ label{
+                    border-radius: 50%;
+                }
+        }
+}
+
+main{
+        @extend .col-md-12, .col-sm-12, .col-xs-12; 
+        position: relative;
+        padding: 0;
+        @media screen and (max-width: 1324px){
+               margin-top: 100px;
+        }
+        @media screen and (max-width: 732px){                                      
+                margin-top: 140px;                                         
+        }
+        h2{
+                font-size: 5.625em;
+        }      
+        .banner{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                margin-top: 0px;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                @media screen and (max-width: 1500px){  
+                        height: auto;           
+                }
+                img{
+                        width: 100%;
+                        max-width: 100%;
+                }
+        }
+        .sobre{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                height: 937px;
+                background: #004415;
+                @media screen and (max-width: 1324px){
+                       height: auto;
+                }                 
+                .texto{
+                        @extend .col-md-4, .col-md-offset-2, .col-sm-12, .col-xs-12;
+                        @media screen and (max-width: 992px){
+                               margin-left: 0%;
+                               padding: 40px 20px
+                               ;
+                        } 
+                        @media screen and (max-width: 1324px) and (min-width: 992px){
+                               margin-left: 2%;
+                               width: 48%;
+                        }            
+                        div{
+                                margin-right: 100px;
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                height: 937px;  
+                                @media screen and (max-width: 1024px){
+                                        height: auto;
+                                        margin-right: 20px;
+                                }                                                                    
+                                i{
+                                        font-size: 2.3em;  
+                                        color: #fff;  
+                                        margin-bottom: 20px; 
+                                        line-height: 0.8;
+                                }                                        
+                                img{
+                                        margin-top: 30px;
+                                        width: 439px;
+                                        max-width: 100%;
+                                        height: auto;
+                                }
+                                p{
+                                        font-size: 1.513em;
+                                        color: #fff;                                      
+                                        font-family: 'Acumin Pro Thin';
+                                        line-height: 1.3;
+                                        @media screen and (max-width: 1530px){
+                                                font-size: 1.4em;
+                                        }
+                                }
+                                strong{
+                                     font-weight: 700;   
+                                } 
+                        }
+                }
+                .imagem{
+                       @extend .col-md-6, .col-sm-12, .col-xs-12; 
+                        padding: 0;
+                        overflow: hidden;
+                        height: 937px;
+                        @media screen and (max-width: 1530px){
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                        }
+                        @media screen and (max-width: 992px){
+                                height: 60vh;
+                        }
+                        img{
+                                width: 106%;
+                                @media screen and (max-width: 1530px){
+                                        width: auto;
+                                        height: 100%;
+                                }
+                                @media screen and (max-width: 992px){
+                                        width: 100%;
+                                        height: auto;
+                                }
+                        }
+                }
+        }
+        .estatisticas{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                height: 850px;
+                position: relative;
+                @media screen and (max-width: 1324px){
+                        height: auto;
+                }
+                .swiper-container {
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        position: relative;
+                }
+                .swiper-slide {
+                        font-size: 1.125em;
+                        color: #fff;
+                        background: #268200;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        padding: 0px;
+                        .foto-banner{ 
+                                @extend .col-md-6, .col-sm-12, .col-xs-12;
+                                padding: 0;
+                                height: 850px;
+                                overflow: hidden;
+                                position:relative;
+                                @media screen and (max-width: 992px){                                      
+                                        height: 450px; 
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;                                                                        
+                                }
+                                .foto{
+                                        position: relative;
+                                        width: 100%;
+                                        height: 850px;
+                                        @media screen and (max-width: 992px){                                    
+                                                width: initial;                               
+                                                height: auto;                                            
+                                        }
+                                        img{
+                                                width: 100%;
+                                                @media screen and (max-width: 992px){  
+                                                        width: 100%;
+                                                        height: auto;
+                                                }
+                                        }  
+                                }
+                        }
+                        .descricoes{
+                                @extend .col-md-4, .col-md-offset-2, .col-sm-12, .col-xs-12;;
+                                height: 850px;
+                                padding: 0;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start; 
+                                flex-direction: column;                                
+                                background: #268200;
+                                padding-top: 50px;
+                                @media screen and (max-width: 1324px){
+                                        height: auto;
+                                        margin-left: 2%;
+                                        width: 48%;
+                                }
+                                @media screen and (max-width: 992px){                                      
+                                        width: 100%;
+                                        flex-direction: initial;
+                                        flex-wrap: wrap; 
+                                        height: 450px;
+                                }
+                                @media screen and (max-width: 673px){                                      
+                                        height: 650px;  
+                                        flex-direction: column; 
+                                        flex-wrap: initial;                                           
+                                }
+                                .box{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        margin-bottom: 50px;
+                                        @media screen and (max-width: 992px){                                      
+                                                width: 46%;
+                                                margin: 20px 2%;                                                
+                                        }
+                                        @media screen and (max-width: 673px){                                      
+                                                width: 100%;
+                                                margin: 20px 2%; 
+                                                img{
+                                                        width: 60px;
+                                                }                                               
+                                        }
+
+                                        div{
+                                                margin-left: 20px;                                               
+                                                h5, strong{
+                                                        font-size: 33px;
+                                                        color: #fff;
+                                                        font-weight: 700;
+                                                        line-height: 1.3;
+                                                        margin: 0;
+                                                        span{
+                                                                font-size: 33px;
+                                                                color: #fff;
+                                                                font-weight: 300;
+                                                                line-height: 1.3;
+                                                                margin: 0;                                                        
+                                                        }
+                                                }
+                                                p, span{
+                                                        font-size: 28px;
+                                                        color: #fff;
+                                                        font-weight: 300;
+                                                        line-height: 1.3;
+                                                        margin: 0;                                                        
+                                                }
+                                        }
+                                }                                                      
+                        }       
+                }
+                .swiper-pagination{
+                        margin-left: 16.6666666667%;
+                        width: initial;
+                        bottom: 40px;
+                }
+                .swiper-pagination-bullet {
+                        width: 15px;
+                        height: 15px;
+                        text-align: center;
+                        line-height: 20px;
+                        opacity: 1;
+                        border-radius: 0;
+                        background: #ffffff61;
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                }
+
+                .swiper-pagination-bullet-active {
+                        color: #fff;
+                        background: #fff;
+                        border-bottom: 2px solid #fff;
+                }               
+                .swiper-button-white{
+                        height: 95px;
+                        width: 88px;                        
+                        padding-left: 0px; 
+                        background-image: initial;
+                        background: #004415;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .3s;
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                        &:hover{
+                                background: #fff;
+                                padding-left: 10px; 
+                                transition: all .3s; 
+                        }
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                }
+                .swiper-button-next{
+                        left: 50%;
+                        transform: translateX(-50%);
+                        right: initial;
+                        @media screen and (max-width: 992px){  
+                                left: 10%;
+                                transform: translate(-50%, -26%);
+                        }
+                        @media screen and (max-width: 673px){                                      
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                top: 61%;                                         
+                        }
+                        @media screen and (max-width: 425px){ 
+                                top: 63%;                                         
+                        }
+                        @media screen and (max-width: 375px){ 
+                                top: 65%;                                         
+                        }
+                        @media screen and (max-width: 320px){ 
+                                top: 67%;                                         
+                        }
+                        .seta2{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                opacity: 0;
+                                transition: all .4s;
+                                z-index: 9;
+                        }                                            
+                        &:hover{
+                                .seta2{                                        
+                                        opacity: 1;
+                                        transition: all .4s;
+                                }                            
+                        }
+                        
+                }                
+        }
+        .maquete{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                height: 937px;
+                position: relative;
+                @media screen and (max-width: 992px){  
+                        height: auto;
+                }
+
+                .swiper-container {
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        position: relative;
+                        @media screen and (max-width: 992px){  
+                                height: auto;
+                        }
+                }
+                .swiper-slide {
+                        background: #004415;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0px;
+                        @media screen and (max-width: 992px){  
+                               flex-direction: column;
+                        }
+                        .foto-banner{ 
+                                width: 60vw;
+                                position: relative;
+                                height: 937px;                                
+                                z-index: 9;
+                                right: -5%;
+                                padding-bottom: 30px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+                                flex-direction: column;
+                                @media screen and (max-width: 992px){  
+                                       width: 100%;
+                                       height: auto;
+                                }
+                                h1{
+                                        margin-left: 19.6666666667%;
+                                        font-size: 2.5em;
+                                        font-weight: 700;
+                                        color: #fff;
+                                        margin-top: 60px;
+                                        @media screen and (max-width: 992px){ 
+                                                margin-left: 4%; 
+                                                width: 100%;
+                                                height: auto;
+                                                margin: 40px 0;
+                                        }
+                                        @media screen and (max-width: 503px){ 
+                                                font-size: 2.0em;
+                                        }
+                                        @media screen and (max-width: 375px){ 
+                                                font-size: 1.7em;
+                                        }    
+                                }
+                                .foto{
+                                        position: relative;
+                                        width: 100%;
+                                        height: 100vh;
+                                        display: flex;
+                                        align-items: flex-end;
+                                        justify-content: center;
+                                        @media screen and (max-width: 992px){  
+                                                height: auto;
+                                                margin-left: -40px;
+                                        } 
+                                        img{                                               
+                                                max-width: 100%;
+                                                width: 1025px;
+                                        }                                                              
+                                }
+                        }
+                        .descricoes{
+                                width: 40vw;
+                                height: 937px;
+                                padding: 0;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-start; 
+                                flex-direction: column;                                
+                                background: #fff;
+                                padding-bottom: 60px;
+                                @media screen and (max-width: 992px){
+                                        padding-top: 40px;
+                                        width: 100%; 
+                                        height: auto;
+                                        justify-content: flex-start;
+                                        padding-bottom: 0px;
+                                }
+                                /*@media screen and (max-width: 603px){
+                                        height: 630px;                                 
+                                }
+                                @media screen and (max-width: 447px){
+                                        height: 750px;                                 
+                                }                                
+                                @media screen and (max-width: 325px){
+                                        height: 800px;                                 
+                                }*/
+                                .box{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        flex-direction: column;
+                                        margin-bottom: 50px;
+                                        margin-left: 25%;
+                                        margin-right: 6%;
+                                        @media screen and (max-width: 992px){ 
+                                               margin-left: 14%;
+                                        }
+                                        @media screen and (max-width: 603px){
+                                                margin-left: 4%;                                
+                                        }
+                                        h2{
+                                                color: #004415;
+                                                font-size: 7.75em; 
+                                                font-weight: 700;
+                                                margin-left: -75px;
+                                                margin-top: 0;
+                                                line-height: 0.8;
+                                                @media screen and (max-width: 992px){ 
+                                                       font-size: 4.75em; 
+                                                }
+                                                @media screen and (max-width: 603px){
+                                                       margin-left: 0px;                               
+                                                }
+                                        }
+                                        h3{
+                                                color: #004415;
+                                                font-size: 2.938em; 
+                                                font-weight: 700;  
+                                                margin: 0; 
+                                        }
+                                        h4{
+                                                color: #303330;
+                                                font-size: 2.5em; 
+                                                font-weight: 700; 
+                                                margin-bottom: 0;    
+                                        } 
+                                        p{
+                                                font-size: 1.238em;
+                                                margin-bottom: 30px;
+                                                line-height: 1.4; 
+                                        }                                      
+                                }                                                      
+                        }       
+                }
+                .swiper-pagination{
+                        margin-left: 16.6666666667%;
+                        width: initial;
+                        bottom: 20px;
+                }
+                .swiper-pagination-bullet {
+                        width: 15px;
+                        height: 15px;
+                        text-align: center;
+                        line-height: 20px;
+                        opacity: 1;
+                        border-radius: 0;
+                        background: #ffffff61;
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                }
+                .swiper-pagination-bullet-active {
+                        color: #fff;
+                        background: #fff;
+                        border-bottom: 2px solid #fff;
+                }               
+                .swiper-button-white{
+                        height: 95px;
+                        width: 88px;                        
+                        padding-left: 0px; 
+                        background-image: initial;
+                        background: #268200;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .3s;
+                        @media screen and (max-width: 992px){ 
+                                height: 60px;
+                                width: 50px; 
+                                img{
+                                        height: 40px;  
+                                        width: auto;
+                                }
+                                
+                        }
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                        &:hover{
+                                background: #FEDC00;
+                                padding-left: 10px; 
+                                transition: all .3s; 
+                        }
+                }
+                .swiper-button-next{
+                        top: 30%;
+                        left: 60%;
+                        transform: translateX(-50%);
+                        right: initial;
+                        @media screen and (max-width: 992px){  
+                                left: initial;
+                                right: 0%;
+                                top: 55%;
+                        }
+                        @media screen and (max-width: 878px){ 
+                                top: 52%;
+                        }
+                        @media screen and (max-width: 768px){ 
+                                top: 690px;
+                        }
+                        @media screen and (max-width: 676px){ 
+                                top: 540px;
+                        }                        
+                        @media screen and (max-width: 503px){ 
+                                top: 500px;
+                        }
+                        @media screen and (max-width: 425px){ 
+                                top: 523px;
+                        }
+                        @media screen and (max-width: 350px){ 
+                                top: 536px;
+                        }
+                        @media screen and (max-width: 320px){ 
+                                top: 503px;
+                        }
+                        .seta2{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                opacity: 0;
+                                transition: all .4s;
+                                z-index: 9;
+                        }                                            
+                        &:hover{
+                                .seta2{                                        
+                                        opacity: 1;
+                                        transition: all .4s;
+                                }                            
+                        }                        
+                }                
+        }
+        .transicao{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                background-image: url(../images/fotos/transicao.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                padding: 130px 0 150px;   
+                article{
+                        @extend .col-md-10, .col-md-offset-2, .col-sm-12, .col-xs-12;;
+                        padding: 0;
+                        @media screen and (max-width: 992px){                                      
+                               padding: 40px 40px;                                     
+                        }
+                        h2{
+                                color: #fff;
+                                font-size: 3.188em;
+                                font-weight: 400;
+                                margin-bottom: 30px;
+                        }
+                        img{
+                                max-width: 100%;     
+                        }
+                }           
+        }
+        .texto-transicao{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                background: #fff;                
+                .texto1{
+                        @extend .col-md-4, .col-md-offset-2, .col-sm-12, .col-xs-12;                       
+                        background: #fff;
+                        padding-right: 80px;
+                        padding-top: 80px;
+                        @media screen and (max-width: 1324px){
+                                margin-left: 2%;
+                                width: 48%;
+                        } 
+                        @media screen and (max-width: 992px){
+                                margin-left: 0;
+                                padding: 40px;
+                                width: 100%;
+                        }        
+                        p{
+                                font-size: 1.563em;
+                                color: #303330;
+                                font-weight: 300;
+                                margin-bottom: 30px;
+                        }
+                        strong{
+                             font-weight: 700;   
+                        } 
+                }
+                .texto2{
+                        @extend .col-md-6, .col-sm-12, .col-xs-12;                       
+                        padding: 80px 90px 40px;
+                        background: #0000FF;
+                        @media screen and (max-width: 992px){
+                                padding: 40px 40px;
+                                width: 100%;
+                        }            
+                        p,li{
+                                font-size: 1.563em;
+                                color: #fff;
+                                font-weight: 300;
+                                margin-bottom: 30px;                                
+                                img{
+                                        margin-right: 20px;
+                                }
+                        }
+                        li{
+                                position: relative;  
+                                list-style: none;
+                                padding-left: 35px;                        
+                                &:before{
+                                       content: url(../images/seta.png);
+                                       position: absolute;
+                                       left: -20px;
+                                       top: 0; 
+                                       z-index: 9; 
+                                }
+                        }
+                        strong{
+                             font-weight: 700;   
+                        } 
+                }
+        }
+        .governanca{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                background-image: url(../images/fotos/governanca.jpg);
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: cover;
+                height: 840px; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media screen and (max-width: 992px){
+                        height: 60vh; 
+                }
+                h2{
+                        text-align: center;
+                        color: #fff;
+                        font-size: 7.5em;
+                        margin-left: 80px;
+                        @media screen and (max-width:1500px){
+                               font-size: 6.0em;
+                        } 
+                        @media screen and (max-width:1300px){
+                                font-size: 4.5em;
+                        } 
+                        @media screen and (max-width: 992px){
+                                margin-left: 0; 
+                                font-size: 4.375em;
+                        }                        
+                        @media screen and (max-width:425px){
+                                font-size: 3.375em;
+                        }
+                }            
+        }
+        .texto-governanca{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                height: 884px;
+                overflow: hidden;
+                @media screen and (max-width:1707px){
+                        height: 900px; 
+                }
+                @media screen and (max-width:1607px){
+                        height: 960px;
+                }
+                @media screen and (max-width:1410px){
+                       height: 1030px;  
+                }
+                @media screen and (max-width:1300px){
+                       height: 1130px   
+                }
+                @media screen and (max-width:1000px){
+                        height: auto;
+                }
+                .conteudo1{
+                        @extend .col-md-6;
+                        padding: 0;                                              
+                        .texto1{
+                                @extend .col-md-9, .col-md-offset-3;                    
+                                padding: 60px 75px 75px 0px;
+                                height: 374px;
+                                @media screen and (max-width:1707px){
+                                        height: 370px; 
+                                }
+                                @media screen and (max-width:1607px){
+                                         height: 374px;   
+                                }
+                                @media screen and (max-width:1400px){
+                                        height: 374px;   
+                                }
+                                @media screen and (max-width:1325px){
+                                        height: 374px;
+                                        margin-left: 4%;
+                                        width: 98%;  
+                                }                                                                
+                                @media screen and (max-width:1180px){
+                                        height: 374px;   
+                                } 
+                                @media screen and (max-width:1000px){
+                                        height: auto;
+                                        margin-left: 0;
+                                        padding: 40px;
+                                }                                 
+
+                                p{
+                                        font-size: 1.438em;
+                                        font-weight: 300;
+                                        color: #000;
+                                }
+                        }
+                        .texto2{
+                                @extend .col-md-12;
+                                background: #004415;
+                                height: 910px; 
+                                padding: 75px 75px 95px 0px;
+                                @media screen and (max-width:1707px){
+                                     eight: 910px;   
+                                } 
+                                @media screen and (max-width:1325px){                                     
+                                     width: 100%;  
+                                }
+                                @media screen and (max-width:1000px){
+                                     height: auto;
+                                     padding: 40px;
+                                }                               
+                                p{
+                                        @extend .col-md-9, .col-md-offset-3;
+                                        font-size: 1.563em;
+                                        color: #fff;
+                                        font-weight: 300;
+                                        margin-bottom: 60px;
+                                        line-height: 1.2; 
+                                        @media screen and (max-width:1325px){
+                                                margin-left: 2%;
+                                                width: 98%;  
+                                        }
+                                        @media screen and (max-width:1000px){
+                                                width: 100%;
+                                                margin-left: 0;
+                                        }  
+                                }
+                                li{
+                                        @extend .col-md-9, .col-md-offset-3;
+                                        font-size: 1.563em;
+                                        color: #fff; 
+                                        font-weight: 300;
+                                        list-style: none;
+                                        margin-bottom: 20px;
+                                        line-height: 1.1;    
+                                        @media screen and (max-width:1325px){
+                                             margin-left: 2%;
+                                             width: 98%;  
+                                        }
+                                }
+                                strong{
+
+                                        color: #FEDC00;
+                                        font-size: 2.063em;
+                                        font-weight: 700;
+                                }
+                        }
+                }
+                .conteudo2{
+                        @extend .col-md-6;
+                        background: #268200;
+                        height: 884px;
+                        padding: 60px 60px 60px 100px;
+                        @media screen and (max-width:1707px){
+                                height: 100%; 
+                        }
+                       
+                        @media screen and (max-width:1300px){
+                                padding: 60px 60px 60px 100px;
+                        } 
+                        @media screen and (max-width:1185px){
+                                padding: 50px 50px 50px 50px;   
+                        }                                
+                        @media screen and (max-width:1050px){
+                                padding: 20px 20px 20px 20px;
+                        } 
+                        @media screen and (max-width:992px){
+                                height: auto; 
+                                padding: 40px;
+                        }
+                        h2{
+                                color: #fff;
+                                font-size: 2.063em;
+                                font-weight: 700;
+                                margin: 70px 0 40px;
+                        }                        
+                        li{
+                                position: relative;  
+                                list-style: none;
+                                padding-left: 15px;
+                                font-size: 1.813em;
+                                color: #fff;
+                                font-weight: 300;
+                                margin-bottom: 30px;                           
+                                &:before{
+                                       content: url(../images/certo.svg);
+                                       position: absolute;
+                                       left: -20px;
+                                       top: 0; 
+                                       z-index: 9; 
+                                }
+                        }
+                        strong{
+                             font-weight: 700;   
+                        }  
+                }
+        }
+        .pessoas{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                height: 1000px;
+                overflow: hidden;
+                @media screen and (max-width:1000px){
+                     height: auto;
+                }
+                .conteudo1{
+                        @extend .col-md-5;
+                        padding: 0;                                              
+                        .texto1{
+                                padding: 0px 150px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 450px;
+                                @media screen and (max-width:1810px){
+                                    padding: 0px 100px; 
+                                }
+                                @media screen and (max-width:1607px){
+                                    padding: 0px 100px;
+                                }
+                                @media screen and (max-width:1407px){
+                                    padding: 0px 50px;
+                                }
+                                @media screen and (max-width:1300px){
+                                    padding: 0px 50px;
+                                }
+                                @media screen and (max-width:1150px){
+                                     padding: 0px 20px;
+                                }
+                                @media screen and (max-width:1000px){
+                                        height: auto;
+                                        margin-left: 0%;
+                                        padding: 40px;
+                                }
+                                p{
+                                        font-size: 1.438em;
+                                        font-weight: 300;
+                                        color: #000;
+                                }
+                        }
+                        .texto2{
+                                background: #FEDC00;
+                                padding: 0px 150px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                height: 550px;
+                                @media screen and (max-width:1810px){
+                                    padding: 0px 100px; 
+                                }
+                                @media screen and (max-width:1607px){
+                                    padding: 0px 100px;
+                                }
+                                @media screen and (max-width:1407px){
+                                    padding: 0px 50px;
+                                }
+                                @media screen and (max-width:1300px){
+                                    padding: 0px 50px;
+                                }
+                                @media screen and (max-width:1150px){
+                                     padding: 0px 20px;
+                                }
+                                @media screen and (max-width:1000px){
+                                        height: auto;
+                                        padding-left: 4%;
+                                        padding: 50px;
+                                }
+                                h3{
+                                        font-size: 2.938em;
+                                        color: #004415;
+                                        font-weight: 700;  
+                                        margin: 0px 0 10px;
+                                        text-align: left;
+                                        width: 100%;
+                                }
+                                p{
+                                        font-size: 1.563em;
+                                        color: #004415;
+                                        font-weight: 400;
+                                        line-height: 1.2; 
+                                        margin: 0;
+                                }
+                                span{
+                                        font-size: 1.438em;
+                                        font-weight: 300;
+                                        text-align: left;
+                                        width: 100%;
+                                }                               
+                        }
+                }
+                .conteudo2{
+                        @extend .col-md-7;
+                        background: #268200;
+                        padding: 0px;
+                        height: 1000px;
+                        overflow: hidden;
+                        @media screen and (max-width:992px){
+                                height: auto;
+                        }  
+                        h2{
+                                position: absolute;
+                                font-size: 8.75em;
+                                font-weight: 700;
+                                color: #fff;
+                                top: 45%;
+                                left: 56%;
+                                transform: translate(-50%, -50%);
+                                @media screen and (max-width: 992px){
+                                        height: auto;
+                                        font-size: 6.75em;
+                                        left: 50%;
+                                }
+                                @media screen and (max-width: 450px){
+                                        font-size: 4.75em;
+                                }
+                                @media screen and (max-width: 350px){
+                                         font-size: 2.75em;
+                                }
+                        }
+                        img{
+                                max-width: 100%;
+                                width: 100%;                                   
+                                @media screen and (max-width:1571px){
+                                        height: 100%;
+                                        width: auto;
+                                        max-width: initial ;
+                                }
+                                @media screen and (max-width:992px){
+                                        height: auto;
+                                        max-width: 100%;
+                                        width: 100%; 
+                                }
+                        }
+                }
+        }
+        .realizacoes{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                height: 980px;
+                overflow: hidden;
+                padding: 0;
+              /*  @media screen and (max-width:1356px){
+                        height: 980px;
+                }*/
+                @media screen and (max-width:1130px){
+                        height: 1100px;
+                }
+                @media screen and (max-width:992px){
+                        height: auto;
+                }
+                .conteudo1{
+                        @extend .col-md-7, .col-sm-12, .col-xs-12; 
+                        padding: 0;                                              
+                        .texto1{
+                                background: #268200; 
+                                height: 420px;                              
+                                padding: 40px 210px 40px 357px;
+                                @media screen and (max-width:1772px){
+                                        padding: 40px 90px 40px 260px; 
+                                }
+                                @media screen and (max-width:1576px){
+                                        padding: 40px 60px 40px 200px; 
+                                }
+                                @media screen and (max-width:1324px){
+                                        padding: 60px; 
+                                }
+                                @media screen and (max-width:992px){
+                                        height: auto;
+                                        padding: 40px;
+                                }
+                                h3{
+                                        font-size: 1.813em;
+                                        color: #fff;
+                                        font-weight: 700;
+                                        padding-bottom: 30px    
+                                }
+                                ul{
+                                        padding-left: 20px;
+                                }
+                                li{
+                                        position: relative;  
+                                        list-style: none;
+                                        padding-left: 15px;
+                                        font-size: 1.813em;
+                                        color: #fff;
+                                        font-weight: 300;
+                                        margin-bottom: 30px;
+                                        line-height: 1.2;                           
+                                        &:before{
+                                               content: url(../images/certo.svg);
+                                               position: absolute;
+                                               left: -20px;
+                                               top: 0; 
+                                               z-index: 9; 
+                                        }
+                                }
+                        }
+                        .texto2{
+                                background: #004415;
+                                height: 560px; 
+                                padding: 60px 130px 60px 357px;
+                                @media screen and (max-width:1762px){
+                                        padding: 40px 90px 60px 260px;
+                                }
+                                @media screen and (max-width:1576px){
+                                        padding: 41px 60px 40px 200px; 
+                                }                               
+                                @media screen and (max-width:1130px){
+                                        height: 680px;
+                                }                                
+                                @media screen and (max-width:1324px){
+                                        padding: 60px; 
+                                }
+                                @media screen and (max-width:992px){
+                                        height: auto;
+                                        padding: 40px;
+                                }
+                                p{
+                                        font-size: 1.563em;
+                                        color: #fff;
+                                        font-weight: 300;
+                                        margin-bottom: 60px;
+                                        line-height: 1.2; 
+                                }
+                                ul{
+                                        margin-top: 30px;
+                                        padding-left: 20px
+                                }
+                                li{
+                                        position: relative;  
+                                        list-style: none;
+                                        padding-left: 15px;
+                                        font-size: 1.438em;
+                                        color: #fff;
+                                        font-weight: 300;
+                                        margin-bottom: 30px;
+                                        line-height: 1.2;                           
+                                        &:before{
+                                               content: url(../images/mais.png);
+                                               position: absolute;
+                                               left: -20px;
+                                               top: 0; 
+                                               z-index: 9; 
+                                        }
+                                }
+                                span{
+                                    color: #FEDC00;    
+                                }
+                                strong{
+                                        color: #fff;
+                                        font-size: 1.438em;
+                                        font-weight: 700;
+                                        line-height: 1.2; 
+                                }
+                        }
+                }
+                .conteudo2{
+                        @extend .col-md-5, .col-sm-12, .col-xs-12; 
+                        padding: 0px 0px;
+                       .texto{
+                                @extend .col-md-6;
+                                height: 980px;
+                                padding: 60px 20px;
+                                @media screen and (max-width:1130px){
+                                        width: 100%;
+                                }
+                                @media screen and (max-width:992px){
+                                        height: auto;
+                                        padding: 40px;
+                                        display: flex;
+                                        justify-content: space-around;
+                                        align-items: flex-start;
+                                }
+                                @media screen and (max-width:552px){
+                                        justify-content: flex-start;
+                                        flex-direction: column;
+                                }
+                                strong{
+                                        font-size: 1.438em;
+                                        color: #004415;
+                                        font-weight: 700;
+                                        line-height: 1.2;     
+                                } 
+                                h3{
+                                        font-size: 2.063em;
+                                        color: #004415;
+                                        font-weight: 700;
+                                        margin-top: 20px;
+                                        margin-bottom: 0;
+                                        line-height: 1.2;
+                                }       
+                                p{
+                                        font-size: 2.063em;
+                                        color: #004415;
+                                        font-weight: 300;
+                                         line-height: 1.2;
+                                } 
+                                div{
+                                        margin-bottom: 85px;
+                                        @media screen and (max-width:992px){
+                                                margin-bottom: 20px;
+                                        }
+                                }                      
+                       }
+                       .imagem{
+                                @extend .col-md-6;
+                                height: 980px;
+                                padding: 0;                               
+                                @media screen and (max-width:1130px){
+                                        display: none;
+                                }                                                              
+                                img{
+                                        width: 100%;
+                                        @media screen and (max-width:1585px){
+                                                height: 100%;
+                                                width: auto;
+                                        }                                        
+                                }
+                       }
+                }
+        }
+        .diversidade-desktop{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                height: 980px;
+                overflow: hidden;
+                padding: 0;                
+                position: relative;
+                @media screen and (max-width:1772px){
+                        height: 930px;
+                }                
+                @media screen and (max-width:992px){
+                        display: none;
+                }
+                .swiper-container {
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        position: relative;
+                }
+                .slide1{
+                        .foto-banner{
+                              @extend .col-md-5;   
+                        }
+                        .descricoes{
+                                @extend .col-md-7;
+                        }    
+                        .texto1{
+                                height: 510px;
+                                padding: 40px 100px 30px 240px;
+                                @media screen and (max-width:1772px){
+                                        padding: 40px 40px 40px 150px;                                       
+                                }                               
+                                @media screen and (max-width: 1325px){
+                                        padding: 40px;  
+                                                                       
+                                }
+                                @media screen and (max-width:1200px){                                        
+                                      
+                                }
+                                @media screen and (max-width:992px){
+                                        height: auto;
+                                }
+                        }  
+                        .texto2{
+                                height: 470px;
+                                padding: 60px 60px 30px 340px;
+                                @media screen and (max-width:1772px){
+                                        padding: 40px 80px 40px 250px;
+                                }                               
+                                @media screen and (max-width: 1325px){
+                                        padding: 40px;
+                                }                               
+                                @media screen and (max-width:992px){
+                                        height: auto;
+                                }
+                        }  
+                }
+                .slide2{
+                        .texto1{
+                                height: 510px;
+                                padding: 40px 40px 30px 60px;
+                        }                         
+                        .texto3{
+                                padding: 40px 40px 30px 60px;
+                        }
+                        .texto4{
+                                @media screen and (max-width: 1260px){                                      
+                                        height: 510px;
+                                }
+                                @media screen and (max-width: 992px){                                      
+                                        height: auto; 
+                                }
+                        }
+                        .descricoes{
+                                @extend .col-md-6;
+                        } 
+                        .foto-banner{
+                                @extend .col-md-6;
+                        } 
+                }
+                .swiper-slide {                       
+                        color: #fff;
+                        background: #0000FF;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        padding: 0px;
+                        .foto-banner{                                
+                                padding: 0;
+                                overflow: hidden;
+                                position:relative;
+                                .foto{
+                                        position: relative;
+                                        height: 980px;
+                                        width: 100%;
+                                        @media screen and (max-width:1772px){
+                                                height: 937px
+                                        }                                       
+                                        img{
+                                                width: 100%;
+                                                @media screen and (max-width: 1642px){
+                                                       height: 100%;
+                                                       width: auto;
+                                                } 
+                                        }                      
+                                }
+                                .texto{
+                                        position: absolute;
+                                        bottom: 50px;
+                                        right: 50px;
+                                        z-index: 9;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        flex-direction: column;
+                                        p{
+                                                font-size: 20px;
+                                                color: #0000FF;
+                                                padding: 40px;
+                                                width: 500px;
+                                                height: 300px;
+                                                background: #fff;
+                                        }
+                                }
+                        }
+                        .descricoes{
+                                padding: 0;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start; 
+                                flex-direction: column;
+                                .texto1{
+                                        background: #fff; 
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        div{
+                                                padding-left: 30px;
+                                                h2{
+                                                        font-size: 2.2em;
+                                                        color: #303330;
+                                                        font-weight: 700;
+                                                        line-height: 1.2; 
+                                                        margin: 0;
+                                                        @media screen and (max-width: 1680px){
+                                                                font-size: 2em;
+                                                        }  
+                                                }
+                                                p{
+                                                        font-size: 1.6em;;
+                                                        color: #000;
+                                                        font-weight: 300;
+                                                        margin: 20px 0;
+                                                        @media screen and (max-width: 1680px){
+                                                                font-size: 1.3em;
+                                                        } 
+                                                }
+                                                h3{
+                                                        font-size: 1.6em;;
+                                                        color: #000;
+                                                        font-weight: 700;
+                                                        margin-bottom: 20px;
+                                                        @media screen and (max-width: 1680px){
+                                                                font-size: 1.3em;
+                                                        }
+                                                }
+                                                ul{
+                                                        padding-left: 20px;
+                                                }
+                                                li{
+                                                        position: relative;  
+                                                        list-style: none;
+                                                        padding-left: 6px;
+                                                        font-size: 1.6em;;
+                                                        color: #000;
+                                                        font-weight: 300;
+                                                        margin-bottom: 15px; 
+                                                        @media screen and (max-width: 1680px){
+                                                                font-size: 1.3em;
+                                                        }                          
+                                                        &:before{
+                                                               content: url(../images/certo-preto.svg);
+                                                               position: absolute;
+                                                               left: -20px;
+                                                               top: 0; 
+                                                               z-index: 9; 
+                                                        }
+                                                        span{
+                                                                 font-weight: 700;
+                                                        }
+                                                }
+                                        }
+                                } 
+                                .texto2{                                        
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        flex-wrap: wrap;                              
+                                        h2{
+                                                @extend .col-md-12;
+                                                padding: 0;
+                                                font-size: 2.25em;
+                                                color: #fff;
+                                                font-weight: 700;
+                                                margin-bottom: 0;
+                                        }
+                                        div{  
+                                                @extend .col-md-4;                                               
+                                                margin: 10px;
+                                                h3{
+                                                        font-size: 1.875em;
+                                                        color: #fff;
+                                                        font-weight: 700;
+                                                        margin: 0;
+                                                }
+                                                p{
+                                                        font-size: 1.375em;
+                                                        color: #fff;
+                                                        font-weight: 300;
+                                                        line-height: 1.2;
+                                                }
+                                                
+                                        }
+                                        ul{
+                                                @extend .col-md-12;
+                                                li{
+                                                        position: relative;  
+                                                        list-style: none;
+                                                        padding-left: 15px;
+                                                        font-size: 1.25em;;
+                                                        color: #fff;
+                                                        font-weight: 300;
+                                                        margin-bottom: 15px;                           
+                                                        &:before{
+                                                               content: url(../images/certo-branco.svg);
+                                                               position: absolute;
+                                                               left: -20px;
+                                                               top: 0; 
+                                                               z-index: 9; 
+                                                        }
+                                                }
+                                        }
+                                } 
+                                .texto3{                                       
+                                        width: 100%;
+                                        height: 50vh;                                       
+                                        h4{
+                                                font-size: 2em;
+                                                color: #fff;
+                                                font-weight: 700;
+                                                margin-top: 0px;
+                                                margin-bottom: 0;
+                                                span{
+                                                        font-size: 0.8em;
+                                                        font-weight: 300; 
+                                                }
+                                        }
+                                        p{
+                                                font-size: 2em;
+                                                color: #fff;
+                                                font-weight: 300;
+                                                line-height: 1.2;
+                                                margin-bottom: 20px;
+                                        }
+                                        strong{
+                                                font-size: 1.8em;
+                                                color: #fff;                                                
+                                                line-height: 1.2;   
+                                        }
+                                }                                                                    
+                        }       
+                }
+                .swiper-pagination{
+                        width: initial;
+                        bottom: 10px;
+                        left: 54%;
+                        transform: translate(-50%, -50%);
+                }
+                .swiper-pagination-bullet {
+                        width: 15px;
+                        height: 15px;
+                        text-align: center;
+                        line-height: 20px;
+                        opacity: 1;
+                        border-radius: 0;
+                        background: #ffffff61;
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                }
+
+                .swiper-pagination-bullet-active {
+                        color: #fff;
+                        background: #fff;
+                        border-bottom: 2px solid #fff;
+                }               
+                .swiper-button-white{
+                        height: 90%;
+                        top: 50%;                       
+                        width: 30px;                        
+                        padding-left: 0px; 
+                        background-image: initial;
+                        background: #FEDC00;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .3s;
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                        &:hover{
+                                background: #fff;                                
+                                transition: all .3s; 
+                        }
+                        &:focus {
+                                outline: -webkit-focus-ring-color auto 0px;
+                        }
+                }
+                .swiper-button-next{
+                        left: 58%;                        
+                        right: initial;
+                        transform: translate(-30%, -50%);
+                        .seta2{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                opacity: 0;
+                                transition: all .4s;
+                                z-index: 9;
+                        }                                            
+                        &:hover{
+                                transition: all .4s;
+                                padding-left: 8px; 
+                                .seta2{                                        
+                                        opacity: 1;
+                                        transition: all .4s;
+                                }                            
+                        }
+                        
+                }
+                .swiper-button-prev{
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        right: initial;
+                        .seta2{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                opacity: 0;
+                                transition: all .4s;
+                                z-index: 9;
+                        }                                            
+                        &:hover{
+                                transition: all .4s;
+                                padding-right: 8px; 
+                                .seta2{                                        
+                                        opacity: 1;
+                                        transition: all .4s;
+                                }                            
+                        }
+                        
+                }                  
+        }
+        .diversidade-mobile{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                position: relative;
+                height: auto;               
+                padding: 0;
+                display: none;
+                @media screen and (max-width:992px){                       
+                        display: block;
+                }               
+                .slide1{
+                        .foto-banner{
+                                @extend .col-md-12;   
+                        }
+                        .descricoes{
+                                @extend .col-md-12;
+                        }    
+                        .texto1{
+                                height: auto;
+                                padding: 40px; 
+                        }  
+                        .texto2{
+                                height: auto;
+                                padding: 40px;
+                                background: #0000FF;
+                                margin-bottom: 20px;                                
+                        }  
+                }
+                .slide2{
+                        .texto1{
+                                height: auto;
+                                padding: 40px;
+                        }                         
+                        .texto3{
+                                padding: 40px;
+                                background: #0000FF;
+                                margin-bottom: 20px; 
+                        }                        
+                        .descricoes{
+                                @extend .col-md-6;
+                        } 
+                        .foto-banner{
+                                @extend .col-md-6;
+                        } 
+                }
+                .swiper-slide {
+                        padding: 0px;
+                        .foto-banner{                               
+                                position: relative;
+                                padding: 0;
+                                height: 500px;
+                                overflow: hidden;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                .foto{                                      
+                                        position: relative;
+                                        height: auto;
+                                        width: 100%;                                       
+                                        img{
+                                                width: 100%;
+                                                max-width: 100%;
+                                        }                      
+                                }
+                        }
+                        .descricoes{
+                                padding: 0;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start; 
+                                flex-direction: column;
+                                .texto1{
+                                        background: #fff; 
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        @media screen and (max-width: 550px){                       
+                                                flex-direction: column;
+                                                img{
+                                                        margin-bottom: 15px;
+                                                        padding-left: 30px;
+                                                }
+                                        }
+                                        div{
+                                                padding-left: 30px;
+                                                h2{
+                                                        font-size: 2em;
+                                                        color: #303330;
+                                                        font-weight: 700;
+                                                        line-height: 1.2; 
+                                                        margin: 0;
+                                                }
+                                                p{
+                                                        font-size: 1.3em;;
+                                                        color: #000;
+                                                        font-weight: 300;
+                                                        margin: 20px 0;                                                        
+                                                }
+                                                h3{
+                                                        font-size: 1.3em;;
+                                                        color: #000;
+                                                        font-weight: 700;
+                                                        margin-bottom: 20px;                                                        
+                                                }
+                                                ul{
+                                                        padding-left: 20px;
+                                                }
+                                                li{
+                                                        position: relative;  
+                                                        list-style: none;
+                                                        padding-left: 6px;
+                                                        font-size: 1.3em;;
+                                                        color: #000;
+                                                        font-weight: 300;
+                                                        margin-bottom: 15px;      
+                                                        &:before{
+                                                               content: url(../images/certo-preto.svg);
+                                                               position: absolute;
+                                                               left: -20px;
+                                                               top: 0; 
+                                                               z-index: 9; 
+                                                        }
+                                                        span{
+                                                                 font-weight: 700;
+                                                        }
+                                                }
+                                        }
+                                } 
+                                .texto2{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                        flex-wrap: wrap;                              
+                                        h2{
+                                                @extend .col-md-12;
+                                                padding: 0;
+                                                font-size: 2.25em;
+                                                color: #fff;
+                                                font-weight: 700;
+                                                margin-bottom: 20px;
+                                                width: 100%;
+                                        }
+                                        div{  
+                                                @extend .col-md-4;                                               
+                                                margin: 10px;
+                                                h3{
+                                                        font-size: 1.875em;
+                                                        color: #fff;
+                                                        font-weight: 700;
+                                                        margin: 0;
+                                                }
+                                                p{
+                                                        font-size: 1.375em;
+                                                        color: #fff;
+                                                        font-weight: 300;
+                                                        line-height: 1.2;
+                                                }
+                                                
+                                        }
+                                        ul{
+                                                @extend .col-md-12;
+                                                padding-left: 40px;
+                                                li{
+                                                        position: relative;  
+                                                        list-style: none;
+                                                        padding-left: 15px;
+                                                        font-size: 1.25em;;
+                                                        color: #fff;
+                                                        font-weight: 300;
+                                                        margin-bottom: 15px;                           
+                                                        &:before{
+                                                               content: url(../images/certo-branco.svg);
+                                                               position: absolute;
+                                                               left: -20px;
+                                                               top: 0; 
+                                                               z-index: 9; 
+                                                        }
+                                                }
+                                        }
+                                } 
+                                .texto3{                                       
+                                        width: 100%;
+                                        height: auto;                                       
+                                        h4{
+                                                font-size: 2em;
+                                                color: #fff;
+                                                font-weight: 700;
+                                                margin-top: 0px;
+                                                margin-bottom: 0;
+                                                span{
+                                                        font-size: 0.8em;
+                                                        font-weight: 300; 
+                                                }
+                                        }
+                                        p{
+                                                font-size: 2em;
+                                                color: #fff;
+                                                font-weight: 300;
+                                                line-height: 1.2;
+                                                margin-bottom: 20px;
+                                        }
+                                        strong{
+                                                font-size: 1.8em;
+                                                color: #fff;                                                
+                                                line-height: 1.2;   
+                                        }
+                                }                                                                    
+                        }       
+                }                
+        }
+        .compromisso{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                .social{
+                        @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                        padding: 0;
+                        background-image: url(../images/fotos/compromisso.jpg);
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        background-size: cover;
+                        height: 100vh; 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @media screen and (max-width: 992px){ 
+                                height: 60vh;    
+                        }
+                        h2{
+                                text-align: center;
+                                color: #fff;
+                                font-size: 7.75em;
+                                margin-left: 90px;                                
+                                @media screen and (max-width: 992px){                                    
+                                        font-size: 4.75em;
+                                        margin-left: 0px;
+                                }
+                                @media screen and (max-width: 466px){                       
+                                        font-size: 3.75em;
+                                }
+                                @media screen and (max-width: 375px){                       
+                                        font-size: 2.75em;
+                                }
+                        }            
+                }
+                .apoio-covid{
+                        @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                        padding: 0;
+                        overflow: hidden;
+                        height: 200px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @media screen and (max-width: 992px){
+                                height: auto;
+                                flex-direction: column;
+                        }
+                        .icone{
+                                @extend .col-md-2, .col-sm-12, .col-xs-12; ;
+                                background: #FEDC00;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 70px 50px 70px 141px;
+                                margin-left: 3.333333%;
+                                @media screen and (max-width:1322px){
+                                        margin-left: 0; 
+                                        padding: 70px; 
+                                }
+                                @media screen and (max-width: 992px){
+                                        padding: 40px
+                                }
+                        }
+                        .texto{
+                                width: 100%; 
+                                background: #268200; 
+                                padding: 70px 100px 70px 50px;
+                                @media screen and (max-width: 992px){
+                                        padding: 40px
+                                }
+                                p{
+                                        font-size: 2.063em;
+                                        font-weight: 300;
+                                        color: #fff;
+                                }  
+                        }
+                } 
+
+                .principais{
+                        @extend .col-md-10, .col-md-offset-2, .col-sm-12, .col-xs-12;
+                        padding: 0; 
+                        @media screen and (max-width:1322px){                                        
+                                margin-left: 40px;
+                        }
+                        @media screen and (max-width: 992px){
+                                padding: 40px;
+                                margin-left: 0;
+                        }
+                        h3{
+                                font-size: 2.063em;
+                                font-weight: 700;
+                                color: #0000FF;
+                                margin: 70px 0;  
+                                @media screen and (max-width: 992px){
+                                       margin: 0px 0 20px; 
+                                }
+                        }
+
+                        div{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                @media screen and (max-width:922px){                                        
+                                         flex-wrap: wrap;
+                                }                               
+                                ul{
+                                        @extend .col-md-4, .col-sm-4, .col-xs-12;
+                                        padding-right: 130px;
+                                        padding-left: 30px;
+                                        @media screen and (max-width:1550px){                                        
+                                                padding-right: 60px;
+                                        }
+                                        @media screen and (max-width:1322px){                                        
+                                                padding-right: 20px
+                                        }
+                                        @media screen and (max-width:992px){                                        
+                                                padding: 20px
+                                        }
+                                }
+                                li{
+                                        position: relative;  
+                                        list-style: none;
+                                        padding-left: 6px;
+                                        font-size: 1.438em;
+                                        color: #000;
+                                        font-weight: 300;
+                                        margin-bottom: 40px;                           
+                                        &:before{
+                                               content: url(../images/certo-azul.svg);
+                                               position: absolute;
+                                               left: -30px;
+                                               top: 10px; 
+                                               z-index: 9; 
+                                        }
+                                }
+                        }
+                }   
+        }  
+        .transportadoras{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                padding: 0;
+                .trasporte{
+                       @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                        padding: 0;
+                        background-image: url(../images/fotos/transportadoras.jpg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        height: 75vh; 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @media screen and (max-width:922px){                                        
+                                height:60vh; 
+                        }
+                        h2{
+                                text-align: center;
+                                color: #fff;
+                                font-size: 8.375em;
+                                margin-left: 110px;
+                                font-weight: bold;
+                                @media screen and (max-width:1322px){
+                                        margin-left: 0px;
+                                }
+                                @media screen and (max-width:1100px){
+                                        font-size: 6.375em;
+                                }                                
+                                @media screen and (max-width: 992px){
+                                        font-size: 3.375em;
+                                }
+                                @media screen and (max-width:425px){
+                                        font-size: 2.875em;
+                                }
+                                @media screen and (max-width:320px){
+                                        font-size: 2.0em;
+                                }
+                        }            
+                }
+                .conteudo{
+                        @extend .col-md-4, .col-sm-12, .col-xs-12; 
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        padding-left: 140px;
+                        @media screen and (max-width: 1324px){
+                                padding-left: 0;
+                        }
+                        @media screen and (max-width:922px){                                        
+                                padding: 0px;
+                        }
+
+                        .texto{
+                                width: 100%;
+                                background: #268200;
+                                padding: 80px 60px 80px 90px;
+                                @media screen and (max-width: 1680px){
+                                        padding: 50px 50px 50px 70px;
+                                }
+                                @media screen and (max-width: 1600px){
+                                        padding: 50px 50px 50px 70px;
+                                }
+                                @media screen and (max-width: 1600px){
+                                        padding: 50px 50px 50px 70px;
+                                }
+                                @media screen and (max-width: 1438px){
+                                       padding: 50px 30px 50px 50px;
+                                }  
+                                @media screen and (max-width: 1324px){
+                                        padding: 50px;
+                                }
+                                @media screen and (max-width:922px){                                        
+                                        padding: 40px;
+                                }
+                                p{
+                                        font-size: 2.0em;
+                                        color: #fff;  
+                                        @media screen and (max-width: 1680px){
+                                                font-size: 1.5em;
+                                        }  
+                                        @media screen and (max-width: 1600px){
+                                                font-size: 1.4em;
+                                        }
+                                        @media screen and (max-width: 1438px){
+                                                font-size: 1.4em;
+                                        }  
+                                        @media screen and (max-width: 1324px){
+                                                font-size: 2.0em;
+                                        }                                    
+                                }
+                        }
+                        .imagem{
+                                overflow: hidden;
+                                height: 560px;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center; 
+                                img{
+                                        width: 100%;
+                                        height: auto;
+                                        @media screen and (max-width:1736px){
+                                                width: auto;
+                                                height: 100%;
+                                        }
+                                }   
+                        }
+                        .metragem{
+                                width: 100%;
+                                background: #004415;
+                                padding: 80px 60px 80px 90px;
+                                @media screen and (max-width: 1680px){
+                                        padding: 50px 50px 50px 70px;
+                                }
+                                @media screen and (max-width: 1600px){
+                                        padding: 50px 50px 50px 70px;
+                                }
+                                @media screen and (max-width: 1600px){
+                                        padding: 50px 50px 50px 70px;
+                                }
+                                @media screen and (max-width: 1438px){
+                                       padding: 50px 30px 50px 50px;
+                                }  
+                                @media screen and (max-width: 1324px){
+                                        padding: 50px;
+                                }
+                                h3{
+                                        font-size: 2.3em;
+                                        color: #fff;
+                                        font-weight: 800;
+                                        @media screen and (max-width: 1680px){
+                                                font-size: 2.0em;
+                                        }  
+                                        @media screen and (max-width: 1600px){
+                                                font-size: 1.8em;
+                                        }                                          
+                                        @media screen and (max-width: 1324px){
+                                                font-size: 2.3em;
+                                        }                                       
+                                }
+                                p{
+                                        font-size: 2em;
+                                        color: #fff; 
+                                        font-weight: 300;
+                                        @media screen and (max-width: 1680px){
+                                                font-size: 1.5em;
+                                        }  
+                                        @media screen and (max-width: 1600px){
+                                                font-size: 1.4em;
+                                        }                                         
+                                        @media screen and (max-width: 1324px){
+                                                font-size: 2.0em;
+                                        }          
+                                }
+                        }
+                }
+                .principais{
+                        @extend .col-md-8, .col-sm-12, .col-xs-12; 
+                        padding: 0 50px; 
+                        @media screen and (max-width: 922px){
+                                padding: 40px; 
+                        }
+                        p{
+                                font-size: 1.813em;
+                                font-weight: 300;
+                                color: #303330;
+                                margin: 70px 0;
+                                padding-right: 100px;
+                                @media screen and (max-width: 1680px){
+                                        padding-right: 50px;
+                                        font-size: 1.5em;
+                                }                                 
+                                @media screen and (max-width: 1600px){
+                                        padding-right: 50px;
+                                        font-size: 1.2em;
+                                }                                          
+                                @media screen and (max-width: 1324px){
+                                        padding-right: 40px;
+                                        font-size: 1.2em;
+                                }
+                                @media screen and (max-width: 922px){
+                                        padding: 0px; 
+                                }
+                        }
+
+                        div{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                @media screen and (max-width: 922px){
+                                        flex-wrap: wrap;
+                                }
+                                ul{
+                                        @extend .col-md-5, .col-sm-5, .col-xs-12;
+                                        padding-right: 80px;
+                                        padding-left: 30px;
+                                        @media screen and (max-width: 1680px){
+                                                padding-right: 20px
+                                        }                                 
+                                        @media screen and (max-width: 1600px){
+                                                padding-right: 20px
+                                        }                                          
+                                        @media screen and (max-width: 1324px){
+                                                padding-right: 20px
+                                        }
+                                }
+                                li{
+                                        position: relative;  
+                                        list-style: none;
+                                        padding-left: 6px;
+                                        font-size: 1.438em;
+                                        color: #000000;
+                                        font-weight: 300;
+                                        margin-bottom: 40px; 
+                                        @media screen and (max-width: 1680px){
+                                                font-size: 1.2em;
+                                        }                           
+                                        &:before{
+                                               content: url(../images/certo-verde.svg);
+                                               position: absolute;
+                                               left: -30px;
+                                               top: 10px; 
+                                               z-index: 9; 
+                                        }                                       
+                                }
+                        }
+                        .navio{
+                                @extend .col-md-10;
+                                padding-right: 80px;
+                                padding-left: 30px;                               
+                                li{
+                                        position: relative;  
+                                        list-style: none;
+                                        padding-left: 6px;
+                                        font-size: 2em;
+                                        color: #268200;
+                                        font-weight: 300;
+                                        margin-top: 40px;
+                                        @media screen and (max-width: 1680px){
+                                                font-size: 1.5em;
+                                        }                             
+                                        &:before{
+                                               content: url(../images/certo-verde.svg);
+                                               position: absolute;
+                                               left: -30px;
+                                               top: 10px; 
+                                               z-index: 9; 
+                                        }                                        
+                                }     
+                        }
+                }  
+        }
+        .gestao{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                background-image: url(../images/fotos/gestao.png);
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: cover;
+                height: 90vh; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @media screen and (max-width: 922px){
+                        height: 60vh; 
+                }
+                h2{
+                        text-align: center;
+                        color: #fff;
+                        font-size: 8.375em;
+                        margin-left: 80px;
+                        @media screen and (max-width: 992px){                                      
+                                font-size: 4.75em;
+                                margin-left: 0px;
+                        }
+                        @media screen and (max-width: 390px){
+                                font-size: 3.75em;   
+                        }
+                        @media screen and (max-width: 390px){
+                                font-size: 3.75em;   
+                        }
+                }            
+        }         
+        .ambiental{
+                @extend .col-md-12, .col-sm-12, .col-xs-12; 
+                background: #fff;
+                height: 740px;
+                overflow: hidden;
+                padding: 0;                
+                position: relative;
+                @media screen and (max-width: 992px){
+                        height: auto;
+                }
+                .swiper-container {
+                        width: 100%;
+                        background: #000;
+                        position: relative;
+                } 
+                .conteudo1{
+                        @extend .col-md-6, .col-sm-12, .col-xs-12;                     
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: cover;
+                        height: 740px;
+                        padding: 75px 30px 95px 320px;
+                        @media screen and (max-width: 1680px){
+                                padding: 50px 50px 50px 220px;
+                        }
+                        @media screen and (max-width: 1322px){
+                                padding: 50px 50px 50px 50px;
+                        } 
+                        @media screen and (max-width: 992px){
+                                height: auto;
+                                padding: 40px;
+                        }
+                        .texto{
+                                @extend .col-md-9;
+                                margin: 0px 0 40px; 
+                                @media screen and (max-width: 1780px){
+                                        margin: 0px 0 20px; 
+                                }
+                                @media screen and (max-width: 992px){
+                                      padding: 0px;  
+                                } 
+                                p{                               
+                                        color: #fff;                                        
+                                        font-weight: 300;
+                                        @media screen and (max-width: 1780px){
+                                                font-size: 1.263em !important; 
+                                        }
+                                        @media screen and (max-width: 1322px){
+                                                font-size: 1.563em !important;
+                                        }
+                                }   
+                        }
+                        
+                        .botoes{
+                                @extend .col-md-3, .col-sm-12, .col-xs-12;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                flex-direction: column;
+                                @media screen and (max-width: 992px){
+                                        flex-direction: initial;
+                                }
+                                .swiper-button-white{
+                                        height: 40px;
+                                        width: 40px;
+                                        padding-left: 0px;
+                                        background-image: initial;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        top: initial;
+                                        left: initial;
+                                        right: initial;
+                                        margin: 0;
+                                        transition: all .3s;
+                                        margin: 20px 0;                       
+                                }  
+                                svg{
+                                      width: 40px; 
+                                      height: 40px; 
+                                      margin-bottom: 40px;
+                                }                                
+                        }
+                }              
+                .conteudo2{
+                        @extend .col-md-6, .col-sm-12, .col-xs-12;
+                        padding: 0;                                              
+                        .texto1{
+                                height: auto; 
+                                padding: 50px 150px 20px 80px;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                @media screen and (max-width: 1780px){
+                                       padding: 50px 150px 20px 80px;
+                                }
+                                @media screen and (max-width: 1322px){
+                                       padding: 40px;
+                                }
+                                @media screen and (max-width: 992px){
+                                        flex-direction: column;
+                                        img{
+                                                margin-bottom: 20px;                                               
+                                        }
+                                }
+                                div{                                        
+                                        h2{
+                                                font-size: 3.563em;
+                                                color: #000;
+                                                font-weight: 700;
+                                                line-height: 0.8; 
+                                                margin: 0 0 50px;
+                                                margin-left: 20px; 
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 2.563em
+                                                } 
+                                        }
+                                        p{
+                                                font-size: 1.25em;;
+                                                color: #000;
+                                                font-weight: 300;
+                                                margin: 40px 0;
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 1.0em;
+                                                }
+                                        }
+                                        h3{
+                                                font-size: 1.438em;
+                                                color: #000;
+                                                font-weight: 700;
+                                                margin-bottom: 20px;
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 1.2em;
+                                                }
+                                        }
+                                        ul{
+                                                padding-left: 30px;
+                                        }
+                                        li{
+                                                position: relative;  
+                                                list-style: none;
+                                                padding-left: 6px;
+                                                font-size: 1.25em;;
+                                                color: #000;
+                                                font-weight: 300;
+                                                margin-bottom: 15px; 
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 1.0em;
+                                                }                          
+                                                &:before{
+                                                        content: url(../images/seta-preto.png);
+                                                        position: absolute;                                                              
+                                                        left: -25px;
+                                                        top: 5px;
+                                                        z-index: 9; 
+                                                }
+                                        }
+                                }
+                        } 
+                        .texto2{
+                                height: auto; 
+                                padding: 60px 50px 30px 200px;
+                                background: #fff; 
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                flex-wrap: wrap;
+                                @media screen and (max-width: 1780px){
+                                       padding: 30px 50px 30px 80px;
+                                }
+                                @media screen and (max-width: 992px){
+                                      padding: 40px;  
+                                }                          
+                                h2{
+                                        @extend .col-md-12;
+                                        padding: 0;
+                                        font-size: 1.813em;
+                                        color: #4A4D4A;
+                                        font-weight: 700;
+                                        margin-bottom: 30px;
+                                        @media screen and (max-width: 1322px){
+                                                margin-bottom: 0px;
+                                        }
+                                }                                        
+                                ul{
+                                        padding-left: 30px;
+                                        padding: 0px 150px 0px 30px;
+                                        @media screen and (max-width: 1322px){
+                                                padding: 40px;
+                                        }
+                                }
+                                li{
+                                        position: relative;  
+                                        list-style: none;
+                                        padding-left: 6px;
+                                        font-size: 1.25em;;
+                                        color: #000;
+                                        font-weight: 300;
+                                        margin-bottom: 15px; 
+                                        @media screen and (max-width: 1780px){
+                                                font-size: 1.0em;
+                                        }                          
+                                        &:before{
+                                                content: url(../images/certo-cinza.svg);
+                                                position: absolute;                                                              
+                                                left: -25px;
+                                                top: 5px;
+                                                z-index: 9; 
+                                        }
+                                }
+                        }
+                        .texto3{
+                                height: auto; 
+                                padding: 60px 150px 0px 80px;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: flex-start;
+                                @media screen and (max-width: 1780px){
+                                       padding: 60px 100px 0px 45px;
+                                }
+                                @media screen and (max-width: 992px){
+                                        flex-direction: column;
+                                        padding: 40px;
+                                        img{
+                                                margin-bottom: 20px;                                               
+                                        }
+                                }
+                                div{                                       
+                                        h2{
+                                                font-size: 2.938em;
+                                                color: #fff;
+                                                font-weight: 700;
+                                                line-height: 1.2; 
+                                                margin: 0 0 50px;
+                                                margin-left: 20px;
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 1.938em;
+                                                }  
+                                        }
+                                        p{
+                                                font-size: 0.938em;;
+                                                color: #fff;
+                                                font-weight: 300;
+                                                margin: 40px 0;
+                                        }
+                                        h3{
+                                                font-size: 1.438em;
+                                                color: #fff;
+                                                font-weight: 700;
+                                                margin-bottom: 20px;
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 1.1em;
+                                                }
+                                        }
+                                        ul{
+                                                padding-left: 30px;
+                                        }
+                                        li{
+                                                position: relative;  
+                                                list-style: none;
+                                                padding-left: 6px;
+                                                font-size: 1.25em;;
+                                                color: #fff;
+                                                font-weight: 300;
+                                                margin-bottom: 15px;
+                                                @media screen and (max-width: 1780px){
+                                                        font-size: 1.0em;
+                                                }                           
+                                                &:before{
+                                                        content: url(../images/seta-branco.png);
+                                                        position: absolute;                                                              
+                                                        left: -25px;
+                                                        top: 5px;
+                                                        z-index: 9; 
+                                                }
+                                        }
+                                }
+                        } 
+                }
+
+                .energia{
+                        background: #FEDC00;
+                } 
+                .climaticas{
+                        background: #268200;
+                }
+                .agua{
+                        background: #0000FF;
+                }
+                .residuos{
+                        background: #004415;
+                }               
+                .swiper-slide {
+                        font-size: 1.125em;;
+                        color: #fff;
+                        background: #fff;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        padding: 0px;          
+                }
+
+                .seta{
+                        .swiper-button-white{
+                                height: 95px;
+                                width: 88px;                        
+                                padding-left: 0px; 
+                                background-image: initial;
+                                background: #303330;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transition: all .3s;
+                                &:focus {
+                                        outline: -webkit-focus-ring-color auto 0px;
+                                }
+                                &:hover{
+                                        background: #fff;
+                                        padding-left: 10px; 
+                                        transition: all .3s; 
+                                }
+                                &:focus {
+                                        outline: -webkit-focus-ring-color auto 0px;
+                                }
+                        }
+                        .swiper-button-next{
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                right: initial;
+                                @media screen and (max-width: 992px){
+                                       top: initial;
+                                       bottom: -48px;
+                                }
+                                .seta2{
+                                        position: absolute;
+                                        opacity: 0;
+                                        transition: all .4s;
+                                        z-index: 9;
+                                }                                            
+                                &:hover{
+                                        .seta2{                                        
+                                                opacity: 1;
+                                                transition: all .4s;
+                                        }                            
+                                }                                
+                        }                
+                }                  
+        }     
+}
+
+footer{
+        @extend .col-md-12, .col-sm-12, .col-xs-12; 
+        position: relative;
+        background: #268200;
+        padding: 75px 0;
+        section{
+                padding: 0 140px 0 340px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;  
+                @media screen and (max-width: 1680px){
+                        padding: 50px 50px 50px 220px;
+                }
+                @media screen and (max-width: 1322px){
+                        padding: 50px;
+                }  
+                @media screen and (max-width: 992px){
+                       flex-direction: column;
+                       padding: 40px
+                }                
+                .logo{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center; 
+                        @media screen and (max-width: 992px){
+                               flex-direction: column;
+                               justify-content: center;                             
+                        }   
+                        img{
+                                margin-right: 50px;
+                                @media screen and (max-width: 992px){
+                                        margin-right: 0px;                                                                   
+                                }
+                        }
+                        p{
+                                margin: 0;
+                                font-size: 1.125em;;
+                                color: #fff;
+                                @media screen and (max-width: 992px){
+                                        margin: 40px 0;
+                                        text-align: center;     
+                                }
+                                   
+                        }
+                }
+                .seta{                       
+                       p{
+                                margin: 0 0 0px;
+                                font-size: 1.125em;;
+                                color: #fff;
+                                text-align: center;
+                                text-transform: uppercase;
+                        }
+                        .topo{
+                                background: #00000091;
+                                padding: 20px 15px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transition: all .4s;
+                                .seta2{
+                                        position: absolute;
+                                        opacity: 0;
+                                        transition: all .4s;
+                                        z-index: 9;
+                                }  
+                                &:hover{
+                                        background: #FEDC00;
+                                        transition: all .4s;                                        
+                                        .seta2{                                        
+                                                opacity: 1;
+                                                transition: all .4s;
+                                        } 
+                                }  
+                        }              
+                }            
+        } 
+}
