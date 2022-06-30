@@ -9,15 +9,16 @@ jQuery(document).ready(function($) {
       pagination: {
         el: '.paginacao1',
         clickable: true,
-
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      autoplay: {
-        delay: 5000,
-      },    
+      breakpoints: {
+        992: {
+          autoHeight: true,         
+        }, 
+      },   
     });
 
   // slide da maquete
@@ -35,10 +36,7 @@ jQuery(document).ready(function($) {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 5000,
-      },
+      },      
       breakpoints: {
         992: {
           autoHeight: true,         
@@ -60,10 +58,7 @@ jQuery(document).ready(function($) {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      /*autoplay: {
-        delay: 5000,
-      },    */
+      },      
     });
 
   // slide da slide-ambiental
@@ -75,8 +70,7 @@ jQuery(document).ready(function($) {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-     
+      },     
       breakpoints: {
         992: {
           autoHeight: true,         
